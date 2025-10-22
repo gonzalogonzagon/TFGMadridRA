@@ -14,10 +14,17 @@ public class DisplayPicture : MonoBehaviour, IInteractable
         {
             canvasToShow.gameObject.SetActive(true);
             
-            if (imageDisplay != null && imageAsset != null)
+            if (imageDisplay != null)
             {
-                imageDisplay.sprite = imageAsset;
-                imageDisplay.preserveAspect = true;
+                if (imageAsset != null)
+                {
+                    imageDisplay.sprite = imageAsset;
+                    imageDisplay.preserveAspect = true;
+                }
+                else if (imageDisplay.sprite != null)
+                {
+                    imageDisplay.preserveAspect = true;
+                }
             }
         }
         else
