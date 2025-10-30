@@ -486,6 +486,7 @@ GameObject:
   - component: {fileID: 233029469}
   - component: {fileID: 233029465}
   - component: {fileID: 233029468}
+  - component: {fileID: 233029470}
   m_Layer: 6
   m_Name: TobogganFolleto
   m_TagString: Untagged
@@ -590,6 +591,8 @@ MonoBehaviour:
   canvasToShow: {fileID: 1547618194}
   imageDisplay: {fileID: 1547618195}
   imageAsset: {fileID: 21300000, guid: 1733c1ea679dd6a4d826d2ffd6b0da0e, type: 3}
+  moreInfoButton: {fileID: 1802769387}
+  textMarkerScript: {fileID: 233029470}
 --- !u!65 &233029469
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -611,6 +614,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.78, y: 14.698746, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &233029470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233029464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1e88d11df6f344292b3ea40744084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasToShow: {fileID: 1704628961}
+  titleField: {fileID: 1704628960}
+  descriptionField: {fileID: 1704628959}
+  infoTitle: Pepe
+  infoDescription: Pepo
 --- !u!1001 &384666785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -896,7 +916,8 @@ GameObject:
   - component: {fileID: 707574147}
   - component: {fileID: 707574146}
   - component: {fileID: 707574148}
-  m_Layer: 0
+  - component: {fileID: 707574149}
+  m_Layer: 6
   m_Name: CalleAlcala
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -987,6 +1008,8 @@ MonoBehaviour:
   canvasToShow: {fileID: 1547618194}
   imageDisplay: {fileID: 1547618195}
   imageAsset: {fileID: 21300000, guid: 49dcbd2037cf478419a870b7ed6712cc, type: 3}
+  moreInfoButton: {fileID: 1802769387}
+  textMarkerScript: {fileID: 707574149}
 --- !u!65 &707574147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1024,6 +1047,23 @@ MonoBehaviour:
   invisibleAlpha: 0
   semiTransparentAlpha: 0.25
   fullyVisibleAlpha: 1
+--- !u!114 &707574149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707574143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1e88d11df6f344292b3ea40744084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasToShow: {fileID: 1704628961}
+  titleField: {fileID: 1704628960}
+  descriptionField: {fileID: 1704628959}
+  infoTitle: AFDFSGD
+  infoDescription: DS
 --- !u!1001 &837822842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1135,11 +1175,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f1e88d11df6f344292b3ea40744084b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasToShow: {fileID: 1704628958}
   titleField: {fileID: 1704628960}
   descriptionField: {fileID: 1704628959}
   infoTitle: "Informaci\xF3n"
   infoDescription: "Este es un punto de inter\xE9s."
-  canvasToShow: {fileID: 1704628958}
 --- !u!1 &847641075
 GameObject:
   m_ObjectHideFlags: 0
@@ -2110,6 +2150,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!223 &1704628961 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 4148315364726300739, guid: c8a9d4b1253a13643af666cd1f255f05,
+    type: 3}
+  m_PrefabInstance: {fileID: 1704628957}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1720712812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2183,6 +2229,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f65859dd76364d47aa3b027e313b086, type: 3}
+--- !u!114 &1802769387 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5055076676002136717, guid: 3c55c3a8156466d42a577aa62d401419,
+    type: 3}
+  m_PrefabInstance: {fileID: 1547618193}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1847266673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2329,6 +2387,7 @@ GameObject:
   - component: {fileID: 1858915064}
   - component: {fileID: 1858915066}
   - component: {fileID: 1858915067}
+  - component: {fileID: 1858915068}
   m_Layer: 6
   m_Name: TobogganMainPicture
   m_TagString: Untagged
@@ -2441,6 +2500,25 @@ MonoBehaviour:
   canvasToShow: {fileID: 1547618194}
   imageDisplay: {fileID: 1547618195}
   imageAsset: {fileID: 21300000, guid: e3c987e044548d6499e72bc5707d6a54, type: 3}
+  moreInfoButton: {fileID: 1802769387}
+  textMarkerScript: {fileID: 1858915068}
+--- !u!114 &1858915068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858915063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1e88d11df6f344292b3ea40744084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasToShow: {fileID: 1704628961}
+  titleField: {fileID: 1704628960}
+  descriptionField: {fileID: 1704628959}
+  infoTitle: "Informaci\xF3n"
+  infoDescription: "Este es un punto de inter\xE9s."
 --- !u!1001 &1986545977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2552,11 +2630,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f1e88d11df6f344292b3ea40744084b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasToShow: {fileID: 1704628958}
   titleField: {fileID: 1704628960}
   descriptionField: {fileID: 1704628959}
   infoTitle: "Informaci\xF3n"
   infoDescription: "Este es un punto de inter\xE9s."
-  canvasToShow: {fileID: 1704628958}
 --- !u!1 &2056188326
 GameObject:
   m_ObjectHideFlags: 0

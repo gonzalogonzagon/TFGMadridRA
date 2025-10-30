@@ -3,16 +3,18 @@ using TMPro;
 
 public class TextMarkerWithTitle : MonoBehaviour, IInteractable
 {
+    [SerializeField] private Canvas canvasToShow;
     [SerializeField] private TMP_Text titleField;
     [SerializeField] private TMP_Text descriptionField;
+
     [SerializeField] private string infoTitle = "Información";
     [SerializeField] private string infoDescription = "Este es un punto de interés.";
-    [SerializeField] private GameObject canvasToShow;
+    
 
     public void Interact()
     {
         if (canvasToShow != null)
-            canvasToShow.SetActive(true);
+            canvasToShow.gameObject.SetActive(true);
             
         if (titleField != null)
             titleField.text = infoTitle;
