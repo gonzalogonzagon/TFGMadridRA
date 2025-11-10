@@ -1175,7 +1175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f1e88d11df6f344292b3ea40744084b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasToShow: {fileID: 1704628958}
+  canvasToShow: {fileID: 1704628961}
   titleField: {fileID: 1704628960}
   descriptionField: {fileID: 1704628959}
   infoTitle: "Informaci\xF3n"
@@ -2120,12 +2120,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8a9d4b1253a13643af666cd1f255f05, type: 3}
---- !u!1 &1704628958 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4653591225438127420, guid: c8a9d4b1253a13643af666cd1f255f05,
-    type: 3}
-  m_PrefabInstance: {fileID: 1704628957}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1704628959 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 751415449142213167, guid: c8a9d4b1253a13643af666cd1f255f05,
@@ -2630,7 +2624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f1e88d11df6f344292b3ea40744084b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasToShow: {fileID: 1704628958}
+  canvasToShow: {fileID: 1704628961}
   titleField: {fileID: 1704628960}
   descriptionField: {fileID: 1704628959}
   infoTitle: "Informaci\xF3n"

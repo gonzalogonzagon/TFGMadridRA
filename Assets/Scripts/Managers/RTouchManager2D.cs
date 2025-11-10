@@ -7,17 +7,7 @@ using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 using UnityEngine.EventSystems;
 
-/// <summary>
-/// Manages touch input interactions for camera control and object interaction in a Unity scene.
-/// Handles single-touch gestures for camera rotation, tap detection for object interaction,
-/// and pinch gestures for camera zooming. Integrates with Unity's Input System and supports
-/// raycasting to interactable objects and UI detection.
-/// </summary>
-/// <remarks>
-/// Attach this component to a GameObject with a <see cref="PlayerInput"/> component.
-/// Requires a configured Input Actions asset with actions: "TouchPress", "TouchPosition", "PinchFinger1", "PinchFinger2".
-/// </remarks>
-public class RTouchManager : MonoBehaviour
+public class RTouchManager2D : MonoBehaviour
 {
     private PlayerInput playerInput;
     private InputAction touchPositionAction;
@@ -25,10 +15,7 @@ public class RTouchManager : MonoBehaviour
     private InputAction pinchAction;
 
     private Camera mainCamera;
-    private Transform cameraTransform;
-
-    private Quaternion targetRotation;
-    private float targetFOV;
+    private Vector3 targetCameraPosition;
 
     private PointerEventData pointerEventData;
 
@@ -37,28 +24,33 @@ public class RTouchManager : MonoBehaviour
     private bool isDragging;
     private bool isZooming;
 
+    private float minX, maxX, minY, maxY;
+    private float targetOrthoSize;
+
     [SerializeField]
     private float distance = 50f; // Maximum distance for raycasting to detect interactable objects
     [SerializeField]
     private LayerMask mask; // Layer mask for raycasting
+    [SerializeField]
+    private Transform targetContent; // The content to pan within boundaries 
 
     [SerializeField]
     private float dragThreshold = 0.2f; // Threshold to distinguish between tap and drag
     [SerializeField]
-    private float cameraRotationSpeed = 0.06f; // Adjust rotation speed as needed
-    [SerializeField]
-    private float cameraSmoothSpeed = 15f; // Speed of camera smoothing
+    private float cameraSmoothSpeed = 10f; // Speed of camera smoothing
 
     [SerializeField]
-    private float cameraZoomSpeed = 15f; // Adjust camera zoom speed as needed
+    private float cameraPositionSpeed = 6f; // Adjust panning speed as needed
     [SerializeField]
-    private float minFOV = 20f; // Minimum field of view for zooming
+    private float cameraZoomSpeed = 0.02f; // Adjust camera zoom speed as needed
     [SerializeField]
-    private float maxFOV = 100f; // Maximum field of view for zooming
+    private float minOrthoSize = 1f; // Minimum field of view for zooming
+    [SerializeField]
+    private float maxOrthoSize = 5f; // Maximum field of view for zooming
 
     // Lifecycle methods ------------------------------------------------------------
     private void Awake()
-    {   
+    {
         if (EventSystem.current != null)
             pointerEventData = new PointerEventData(EventSystem.current);
         
@@ -77,11 +69,17 @@ public class RTouchManager : MonoBehaviour
         pinchAction = playerInput.actions["TouchPinch"];
 
         mainCamera = Camera.main;
+        if (mainCamera == null)
+        {
+            Debug.LogError("No camera tagged as MainCamera found in the scene.");
+            enabled = false;
+            return;
+        }
 
-        cameraTransform = mainCamera?.transform;
-        targetRotation = cameraTransform.rotation;
+        targetOrthoSize = mainCamera.orthographicSize;
+        targetCameraPosition = mainCamera.transform.position;
 
-        targetFOV = mainCamera.fieldOfView;
+        UpdateCameraBounds();
     }
 
     private void Start()
@@ -109,11 +107,17 @@ public class RTouchManager : MonoBehaviour
 
     private void Update()
     {
-        // Smoothly rotates the camera towards the target rotation
-        cameraTransform.rotation = Quaternion.Slerp(cameraTransform.rotation, targetRotation, Time.deltaTime * cameraSmoothSpeed);
+        mainCamera.orthographicSize = Mathf.Lerp(
+            mainCamera.orthographicSize,
+            targetOrthoSize,
+            Time.deltaTime * cameraSmoothSpeed
+        );
 
-        // Smoothly adjusts the camera's field of view for zooming
-        mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, targetFOV, Time.deltaTime * cameraSmoothSpeed);
+        mainCamera.transform.position = Vector3.Lerp(
+            mainCamera.transform.position,
+            targetCameraPosition,
+            Time.deltaTime * cameraSmoothSpeed
+        );
     }
 
     // Touch event handlers ------------------------------------------------------------
@@ -129,7 +133,24 @@ public class RTouchManager : MonoBehaviour
         if (!isDragging || isZooming) return;
 
         Vector2 currentTouchPosition = touchPositionAction.ReadValue<Vector2>();
-        UpdateTargetRotation(currentTouchPosition - initialTouchPosition);
+        Vector2 delta = currentTouchPosition - initialTouchPosition;
+
+        // Scale factor based on orthographic size and screen resolution
+        float orthoFactor = targetOrthoSize * 2f / Screen.height;
+        // Delta movement in world space units
+        Vector3 worldDelta = new Vector3(
+            -delta.x * orthoFactor * cameraPositionSpeed, 
+            -delta.y * orthoFactor * cameraPositionSpeed, 0);
+
+        Vector3 newPosition = mainCamera.transform.position + worldDelta;
+
+        // Limit panning within boundaries
+        newPosition.x = Mathf.Clamp(newPosition.x, minX, maxX);
+        newPosition.y = Mathf.Clamp(newPosition.y, minY, maxY);
+
+        targetCameraPosition = newPosition;
+
+        // Update initial touch position for the next delta calculation
         initialTouchPosition = currentTouchPosition;
     }
 
@@ -186,31 +207,6 @@ public class RTouchManager : MonoBehaviour
         return raycastResults.Count > 0;
     }
 
-    // Camera control and rotation methods ------------------------------------------------------------
-    private void UpdateTargetRotation(Vector2 delta)
-    {
-        // Adjust rotation speed based on camera's field of view
-        float fovFactor = mainCamera.fieldOfView / 60f;
-        float adjustedRotationSpeed = cameraRotationSpeed * fovFactor;
-
-        // Get Current Rotation
-        Vector3 angles = targetRotation.eulerAngles;
-
-        // Horizontal Rotation (Y axis)
-        angles.y += -delta.x * adjustedRotationSpeed;
-
-        // Vertical Rotation (X axis)
-        float currentXRotation = angles.x;
-        if (currentXRotation > 180f) currentXRotation -= 360f;
-
-        // Clamped between -80° and 80° to prevent the camera from flipping over
-        float newXRotation = Mathf.Clamp(currentXRotation + delta.y * adjustedRotationSpeed, -80f, 80f);
-        angles.x = newXRotation;
-
-        // Apply New Rotation
-        targetRotation = Quaternion.Euler(angles);
-    }
-
     // Zoom methods ------------------------------------------------------------
     public void OnPinchStart(InputAction.CallbackContext context)
     {
@@ -232,6 +228,7 @@ public class RTouchManager : MonoBehaviour
 
             Zoom(pinchDistance);
         }
+
     }
 
     private void OnPinchEnd(InputAction.CallbackContext context)
@@ -242,8 +239,24 @@ public class RTouchManager : MonoBehaviour
     public void Zoom(float distance)
     {
         distance *= cameraZoomSpeed;
-        targetFOV = Mathf.Clamp(mainCamera.fieldOfView + distance, minFOV, maxFOV);
+        targetOrthoSize = Mathf.Clamp(targetOrthoSize + distance, minOrthoSize, maxOrthoSize);
+
+        UpdateCameraBounds();
     }
 
+    private void UpdateCameraBounds()
+    {
+        if (targetContent != null)
+        {
+            SpriteRenderer sr = targetContent.GetComponent<SpriteRenderer>();
+            Vector2 spriteSize = sr.bounds.size;
+            float vertExtent = targetOrthoSize;
+            float horzExtent = vertExtent * Screen.width / Screen.height;
 
+            minX = targetContent.position.x - spriteSize.x / 2 + horzExtent;
+            maxX = targetContent.position.x + spriteSize.x / 2 - horzExtent;
+            minY = targetContent.position.y - spriteSize.y / 2 + vertExtent;
+            maxY = targetContent.position.y + spriteSize.y / 2 - vertExtent;
+        }
+    }
 }
