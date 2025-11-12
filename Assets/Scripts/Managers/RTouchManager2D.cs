@@ -259,4 +259,23 @@ public class RTouchManager2D : MonoBehaviour
             maxY = targetContent.position.y + spriteSize.y / 2 - vertExtent;
         }
     }
+
+    public void SetTargetContent(Transform newTarget, float minSize, float maxSize, float initialOrthoSize)
+    {
+        targetContent = newTarget;
+        minOrthoSize = minSize;
+        maxOrthoSize = maxSize;
+        targetOrthoSize = Mathf.Clamp(initialOrthoSize, minOrthoSize, maxOrthoSize);
+
+        if (targetContent != null)
+        {
+            targetCameraPosition = new Vector3(
+                targetContent.position.x,
+                targetContent.position.y,
+                mainCamera.transform.position.z
+            );
+        }
+
+        UpdateCameraBounds();
+    }
 }

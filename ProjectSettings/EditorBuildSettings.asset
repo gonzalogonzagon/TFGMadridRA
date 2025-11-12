@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RToboganScene.unity
     guid: 99cbda7ba7c978f428493021ad1b2d9a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/RCinemaScene.unity
     guid: 40891dd8d87b0b0429a176750e7ab49b
   m_configObjects:
