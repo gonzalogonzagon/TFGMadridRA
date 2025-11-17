@@ -13,6 +13,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneTransitionMarker Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5862294761612529985, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862294761612529985, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.56
+      objectReference: {fileID: 0}
     - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
         type: 3}
       propertyPath: m_LocalPosition.x
