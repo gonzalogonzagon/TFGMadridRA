@@ -97,6 +97,8 @@ public class AudioSliderController : MonoBehaviour
         audioSource.time = 0;
         audioSlider.value = 0;
         isPlaying = false;
+        Image icon = btnPlayPause.GetComponent<Image>();
+        if (icon != null) icon.sprite = playIcon;
     }
 
     string FormatTime(float time)
