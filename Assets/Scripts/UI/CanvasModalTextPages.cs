@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
+using UIConstants;
 
 public class CanvasModalTextPages : MonoBehaviour
 {
@@ -15,12 +16,6 @@ public class CanvasModalTextPages : MonoBehaviour
     public string longText;
     [SerializeField]
     private PaginationMode paginationMode = PaginationMode.ByPeriod;
-
-    public enum PaginationMode
-    {
-        ByPeriod,
-        ByNewLine
-    }
 
     private List<string> pages = new List<string>();
     private int currentPage = 0;
@@ -85,5 +80,11 @@ public class CanvasModalTextPages : MonoBehaviour
             currentPage--;
             ShowPage(currentPage);
         }
+    }
+
+    public PaginationMode PaginationMode
+    {
+        get { return paginationMode; }
+        set { paginationMode = value; }
     }
 }

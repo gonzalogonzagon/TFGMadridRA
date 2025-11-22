@@ -1,19 +1,20 @@
 using UnityEngine;
 using TMPro;
+using UIConstants;
 
 public class TextMarkerWithPages : MonoBehaviour, IInteractable
 {
-    [TextArea] public string infoDescription = "Este es un punto de interés.";
+    [TextArea] public string infoDescription = "This is a point of interest description.";
     [SerializeField] private Canvas canvasToShow;
-
-    public CanvasModalTextPages modalTextPages;
+    [SerializeField] private CanvasModalTextPages modalTextPages;
+    [SerializeField] private PaginationMode paginationMode = PaginationMode.ByPeriod;
 
     public void Interact()
     {
         if (canvasToShow != null)
             canvasToShow.gameObject.SetActive(true);
 
-        CambiarContenido(infoDescription);
+        ChangeContent(infoDescription);
     }
 
     public bool CanInteract()
@@ -30,17 +31,18 @@ public class TextMarkerWithPages : MonoBehaviour, IInteractable
         infoDescription = description;
     }
 
-    public void CambiarContenido(string nuevoTexto)
+    public void ChangeContent(string newText)
     {
         if (modalTextPages != null)
         {
-            modalTextPages.longText = nuevoTexto;
+            modalTextPages.longText = newText;
+            modalTextPages.PaginationMode = paginationMode;
             modalTextPages.PaginateText();
             modalTextPages.ShowPage(0);
         }
         else
         {
-            Debug.LogWarning("No se ha asignado la referencia a CanvasModalTextPages en InfoMarker3.");
+            Debug.LogWarning("Please assign the reference to CanvasModalTextPages in TextMarkerWithPages.");
         }
     }
 }
