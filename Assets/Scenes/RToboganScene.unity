@@ -629,8 +629,9 @@ MonoBehaviour:
   canvasToShow: {fileID: 1704628961}
   titleField: {fileID: 1704628960}
   descriptionField: {fileID: 1704628959}
-  infoTitle: Pepe
-  infoDescription: Pepo
+  infoTitle: "El tobog\xE1n: Revista Nuevo Mundo"
+  infoDescription: "Noticia extra\xEDda del n\xFAmero del 2 de abril de 1908 de la
+    revista Nuevo Mundo. (1908. Noticias. Biblioteca Digital memoriademadrid)"
 --- !u!1001 &384666785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1062,8 +1063,10 @@ MonoBehaviour:
   canvasToShow: {fileID: 1704628961}
   titleField: {fileID: 1704628960}
   descriptionField: {fileID: 1704628959}
-  infoTitle: AFDFSGD
-  infoDescription: DS
+  infoTitle: "Calle de Alcal\xE1 y tobog\xE1n de los Jardines del Buen Retiro"
+  infoDescription: "Inscripci\xF3n: Anverso Madrid Calle de Alcala. Reverso: Logo:
+    \"Knacksted & Nather / Lichtdruck / Hamburg\". (1908. Tarjeta postal. Biblioteca
+    Digital memoriademadrid)"
 --- !u!1001 &837822842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2511,8 +2514,9 @@ MonoBehaviour:
   canvasToShow: {fileID: 1704628961}
   titleField: {fileID: 1704628960}
   descriptionField: {fileID: 1704628959}
-  infoTitle: "Informaci\xF3n"
-  infoDescription: "Este es un punto de inter\xE9s."
+  infoTitle: "El tobog\xE1n de Cibeles: Sport higi\xE9nico, emocionante y sin peligro"
+  infoDescription: "Documento compartido por Juan Ram\xF3n Sanz Villa. (1908. Tarjeta
+    postal. Biblioteca Digital memoriademadrid)"
 --- !u!1001 &1986545977
 PrefabInstance:
   m_ObjectHideFlags: 0

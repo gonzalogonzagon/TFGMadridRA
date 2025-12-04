@@ -206,6 +206,130 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &59045846
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1702312901}
+    m_Modifications:
+    - target: {fileID: 1277342754371820462, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_Name
+      value: InfoMPictureDataTheater
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.14999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.14999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.14999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.897747
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.398583
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.0039119
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450178353665569688, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 33afe8f0ee0bc4f4db9f584db8a04759,
+        type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1277342754371820462, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 59045848}
+  m_SourcePrefab: {fileID: 100100000, guid: 3c35d12974544d54c951658b9b7cceb2, type: 3}
+--- !u!1 &59045847 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1277342754371820462, guid: 3c35d12974544d54c951658b9b7cceb2,
+    type: 3}
+  m_PrefabInstance: {fileID: 59045846}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &59045848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59045847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1e88d11df6f344292b3ea40744084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasToShow: {fileID: 1196067498}
+  titleField: {fileID: 1196067500}
+  descriptionField: {fileID: 1196067499}
+  infoTitle: Interior del Real Cinema
+  infoDescription: "Equipado con 54 palcos, 4 de estos permanec\xEDan reservados
+    a la Familia Real. (Fecha entre 1921 y 1933. Fotograf\xEDa. Website Gato por
+    Madrid)"
+--- !u!4 &59045849 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+    type: 3}
+  m_PrefabInstance: {fileID: 59045846}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &62453567
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,6 +856,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1940382937}
+  - {fileID: 1016719853}
   - {fileID: 2012141046}
   m_Father: {fileID: 539930489}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1748,6 +1873,129 @@ MonoBehaviour:
   - {fileID: 273569385}
   - {fileID: 1488149384}
   - {fileID: 951388360}
+--- !u!1001 &1016719852
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 396629435}
+    m_Modifications:
+    - target: {fileID: 1277342754371820462, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_Name
+      value: InfoMPictureData
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.1800001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.19500017
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450178353665569688, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 33afe8f0ee0bc4f4db9f584db8a04759,
+        type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1277342754371820462, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1016719855}
+  m_SourcePrefab: {fileID: 100100000, guid: 3c35d12974544d54c951658b9b7cceb2, type: 3}
+--- !u!4 &1016719853 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1016719852}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1016719854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1277342754371820462, guid: 3c35d12974544d54c951658b9b7cceb2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1016719852}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1016719855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016719854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1e88d11df6f344292b3ea40744084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasToShow: {fileID: 1196067498}
+  titleField: {fileID: 1196067500}
+  descriptionField: {fileID: 1196067499}
+  infoTitle: Real Cinema
+  infoDescription: '"203 MADRID.- Real Cinema // GRAFOS. MADRID" (reverso) Cartulina
+    9 x 14 cm.  (Fecha entre 1921 y 1933. Tarjeta postal. Biblioteca Digital memoriademadrid)'
 --- !u!1001 &1196067497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2469,8 +2717,8 @@ MonoBehaviour:
   titleField: {fileID: 1196067500}
   descriptionField: {fileID: 1196067499}
   infoTitle: Garbancito de la mancha
-  infoDescription: "Se trata del primer largometraje de animaci\xF3n filmado en Europa. 
-    Jos\xE9 Mar\xEDa Blay y Arturo Moreno, 1945."
+  infoDescription: "Se trata del primer largometraje de animaci\xF3n filmado en Europa.
+    (Jos\xE9 Mar\xEDa Blay y Arturo Moreno, 1945)"
 --- !u!1 &1488149384
 GameObject:
   m_ObjectHideFlags: 0
@@ -2780,6 +3028,7 @@ Transform:
   - {fileID: 273569386}
   - {fileID: 951388361}
   - {fileID: 990501176}
+  - {fileID: 59045849}
   m_Father: {fileID: 1808695640}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1713924374 stripped
