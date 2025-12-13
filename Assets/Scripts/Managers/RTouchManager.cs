@@ -211,6 +211,11 @@ public class RTouchManager : MonoBehaviour
         targetRotation = Quaternion.Euler(angles);
     }
 
+    public void SetTargetRotation(Quaternion newRotation)
+    {
+        targetRotation = newRotation;
+    }
+
     // Zoom methods ------------------------------------------------------------
     public void OnPinchStart(InputAction.CallbackContext context)
     {
