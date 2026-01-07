@@ -12,8 +12,7 @@ public class ShowInfoMapMarker : MonoBehaviour, IInteractable
     [SerializeField] private string infoTextPicture;
 
     [Header("Prefabs and References")]
-    [SerializeField] private Transform objectToMove;
-    [SerializeField] private Transform objectToMove2;
+    [SerializeField] private GameObject objectToMove;
     [SerializeField] private Image uiImage;
     [SerializeField] private TextMarkerWithTitle infoMarkerScript;
     [SerializeField] private DisplayPicture displayPictureScript;
@@ -32,17 +31,10 @@ public class ShowInfoMapMarker : MonoBehaviour, IInteractable
         //     return;
 
         // Mueve el objeto 2 a la posición X,Z del objeto 1 (este script)
-        if (objectToMove != null && objectToMove2 != null)
+        if (objectToMove != null)
         {
-            objectToMove.gameObject.SetActive(true);
-            objectToMove2.gameObject.SetActive(true);
-            Vector3 newPos = objectToMove.position;
-            newPos.x = transform.position.x;
-            newPos.y = objectToMove.position.y;
-            newPos.z = transform.position.z;
-            objectToMove.position = newPos;
-            newPos.y = objectToMove2.position.y;
-            objectToMove2.position = newPos;
+            objectToMove.SetActive(true);
+            objectToMove.transform.position = transform.position;
         }
 
         if (uiImage != null && infoImage != null)
@@ -50,20 +42,13 @@ public class ShowInfoMapMarker : MonoBehaviour, IInteractable
             uiImage.sprite = infoImage;
             uiImage.preserveAspect = true;
         }
-        if (displayPictureScript != null)
-        {
-            displayPictureScript.SetImage(infoImage);
-            displayPictureScript.setInfoTitlePicture(infoTitlePicture);
-            displayPictureScript.setInfoDescriptionPicture(infoTextPicture);
+        
+        displayPictureScript?.SetImage(infoImage);
+        displayPictureScript?.setInfoTitlePicture(infoTitlePicture);
+        displayPictureScript?.setInfoDescriptionPicture(infoTextPicture);
 
-        }
-
-        if (infoMarkerScript != null)
-        {
-            infoMarkerScript.setInfoTitle(infoTitle);
-            infoMarkerScript.setInfoDescription(infoText);
-        }
-
+        infoMarkerScript?.setInfoTitle(infoTitle);
+        infoMarkerScript?.setInfoDescription(infoText);
     }
 
     public bool CanInteract()

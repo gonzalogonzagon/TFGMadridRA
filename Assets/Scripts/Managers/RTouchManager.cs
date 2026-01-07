@@ -19,18 +19,19 @@ using UnityEngine.EventSystems;
 /// </remarks>
 public class RTouchManager : MonoBehaviour
 {
+
+    private Camera mainCamera;
+    private Transform cameraTransform;
+
     private PlayerInput playerInput;
     private InputAction touchPositionAction;
     private InputAction touchPressAction;
     private InputAction pinchAction;
 
-    private Camera mainCamera;
-    private Transform cameraTransform;
+    private PointerEventData pointerEventData;
 
     private Quaternion targetRotation;
     private float targetFOV;
-
-    private PointerEventData pointerEventData;
 
     private Vector2 initialTouchPosition;
     private float touchStartTime;
@@ -38,7 +39,7 @@ public class RTouchManager : MonoBehaviour
     private bool isZooming;
 
     [SerializeField]
-    private float distance = 50f; // Maximum distance for raycasting to detect interactable objects
+    private float raycastDistance = 50f; // Maximum distance for raycasting to detect interactable objects
     [SerializeField]
     private LayerMask mask; // Layer mask for raycasting
 
@@ -55,6 +56,8 @@ public class RTouchManager : MonoBehaviour
     private float minFOV = 20f; // Minimum field of view for zooming
     [SerializeField]
     private float maxFOV = 100f; // Maximum field of view for zooming
+
+    [SerializeField] private GameObject infoPanel; // Hides info panel when no interactable is touched
 
     // Lifecycle methods ------------------------------------------------------------
     private void Awake()
@@ -151,22 +154,16 @@ public class RTouchManager : MonoBehaviour
         RaycastHit hit;
         Ray ray = mainCamera.ScreenPointToRay(touchPosition);
 
-        if (Physics.Raycast(ray, out hit, distance, mask))
+        if (Physics.Raycast(ray, out hit, raycastDistance, mask))
         {
             IInteractable interactable = hit.collider.GetComponent<IInteractable>();
             if (interactable != null && interactable.CanInteract())
             {
                 interactable.Interact();
-            }
-            else if (hit.collider.gameObject.GetComponent<Billboard>() != null)
-            {
-                Debug.Log("¡Tocaste un Billboard sin componente de interacción!");
-            }
-            else
-            {
-                Debug.Log("Objeto tocado sin componente IInteractable: " + hit.collider.gameObject.name);
+                return;
             }
         }
+        if (infoPanel != null && infoPanel.activeSelf) infoPanel.SetActive(false);
     }
 
     private bool IsPointerOverUI(Vector2 touchPosition)
@@ -217,7 +214,7 @@ public class RTouchManager : MonoBehaviour
     }
 
     // Zoom methods ------------------------------------------------------------
-    public void OnPinchStart(InputAction.CallbackContext context)
+    private void OnPinchStart(InputAction.CallbackContext context)
     {
         isZooming = true;
         isDragging = false;
@@ -244,7 +241,7 @@ public class RTouchManager : MonoBehaviour
         isZooming = false;
     }
 
-    public void Zoom(float distance)
+    private void Zoom(float distance)
     {
         distance *= cameraZoomSpeed;
         targetFOV = Mathf.Clamp(mainCamera.fieldOfView + distance, minFOV, maxFOV);
