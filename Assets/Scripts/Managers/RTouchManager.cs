@@ -19,7 +19,6 @@ using UnityEngine.EventSystems;
 /// </remarks>
 public class RTouchManager : MonoBehaviour
 {
-
     private Camera mainCamera;
     private Transform cameraTransform;
 
