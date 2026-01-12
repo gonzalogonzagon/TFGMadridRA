@@ -525,8 +525,9 @@ MonoBehaviour:
   canvasToShow: {fileID: 2083216707}
   titleField: {fileID: 2083216706}
   descriptionField: {fileID: 2083216705}
-  infoTitle: "Informaci\xF3n"
-  infoDescription: "Este es un punto de inter\xE9s."
+  infoTitle: "El tobog\xE1n de Cibeles: Sport higi\xE9nico, emocionante y sin peligro"
+  infoDescription: "Documento compartido por Juan Ram\xF3n Sanz Villa. (1908. Tarjeta
+    postal. Biblioteca Digital memoriademadrid)"
 --- !u!212 &268110880
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -840,8 +841,9 @@ MonoBehaviour:
   canvasToShow: {fileID: 2083216707}
   titleField: {fileID: 2083216706}
   descriptionField: {fileID: 2083216705}
-  infoTitle: "Informaci\xF3n"
-  infoDescription: "Este es un punto de inter\xE9s."
+  infoTitle: "El tobog\xE1n: Revista Nuevo Mundo"
+  infoDescription: "Noticia extra\xEDda del n\xFAmero del 2 de abril de 1908 de la
+    revista Nuevo Mundo. (1908. Noticias. Biblioteca Digital memoriademadrid)"
 --- !u!114 &377442890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1350,8 +1352,10 @@ MonoBehaviour:
   canvasToShow: {fileID: 2083216707}
   titleField: {fileID: 2083216706}
   descriptionField: {fileID: 2083216705}
-  infoTitle: "Informaci\xF3n"
-  infoDescription: "Este es un punto de inter\xE9s."
+  infoTitle: "Calle de Alcal\xE1 y tobog\xE1n de los Jardines del Buen Retiro"
+  infoDescription: "Inscripci\xF3n: Anverso Madrid Calle de Alcala. Reverso: Logo:
+    \"Knacksted & Nather / Lichtdruck / Hamburg\". (1908. Tarjeta postal. Biblioteca
+    Digital memoriademadrid)"
 --- !u!114 &703988605
 MonoBehaviour:
   m_ObjectHideFlags: 0
