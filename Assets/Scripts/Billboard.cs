@@ -19,22 +19,23 @@ public class Billboard : MonoBehaviour
         cameraTransform = Camera.main?.transform;
     }
 
-    // Use LateUpdate instead of Update to avoid jittering and ensure the camera has moved first
+    // LateUpdate instead of Update to avoid jittering and ensure the camera has moved first
     void LateUpdate()
     {
+        if (cameraTransform == null || cameraTransform.gameObject != Camera.main?.gameObject)
+            FindMainCamera();
+
         if (cameraTransform != null)
         {
             // Calculate direction from the billboard to the camera
             Vector3 direction = cameraTransform.position - transform.position;
-            // Use world up (Vector3.up) to keep the billboard upright globally, or camera up to match the camera's orientation.
-            Vector3 up = useWorldUp ? Vector3.up : cameraTransform.up;
-
-            // Look at the camera, flipping if needed
-            transform.rotation = Quaternion.LookRotation(flipFace ? -direction : direction, up);
-
-        } else
-        {
-            FindMainCamera();
+            if (direction != Vector3.zero)
+            {
+                // Use world up (Vector3.up) to keep the billboard upright globally, or camera up to match the camera's orientation.
+                Vector3 up = useWorldUp ? Vector3.up : cameraTransform.up;
+                // Look at the camera, flipping if needed
+                transform.rotation = Quaternion.LookRotation(flipFace ? -direction : direction, up);
+            }
         }
     }
 }
