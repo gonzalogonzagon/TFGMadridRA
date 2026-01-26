@@ -16,19 +16,17 @@ public class ShowInfoMapMarker : MonoBehaviour, IInteractable
     [SerializeField] private Image uiImage;
     [SerializeField] private TextMarkerWithTitle infoMarkerScript;
     [SerializeField] private DisplayPicture displayPictureScript;
-    [SerializeField] private GameObject warningCanvas;
+    [SerializeField] private Canvas warningCanvas;
     
     public void Interact()
     {
-        // if (string.IsNullOrEmpty(playerPrefsKey))
-        // {
-        //     if (warningCanvas != null)
-        //         warningCanvas.SetActive(true);
-        //     return;
-        // }
-
-        // if (PlayerPrefs.GetInt(playerPrefsKey, 0) != 1)
-        //     return;
+        if (!CanInteract())
+        {
+            if (warningCanvas != null)
+                warningCanvas.gameObject.SetActive(true);
+            Debug.Log("No se ha desbloqueado este marcador de mapa: " + playerPrefsKey);
+            return;
+        }
 
         // Mueve el objeto 2 a la posición X,Z del objeto 1 (este script)
         if (objectToMove != null)
@@ -53,7 +51,6 @@ public class ShowInfoMapMarker : MonoBehaviour, IInteractable
 
     public bool CanInteract()
     {
-        return true;
-        //return !string.IsNullOrEmpty(playerPrefsKey) && PlayerPrefs.GetInt(playerPrefsKey, 0) == 1 && enabled && gameObject.activeInHierarchy;
+        return PlayerPrefs.HasKey(playerPrefsKey);
     }
 }

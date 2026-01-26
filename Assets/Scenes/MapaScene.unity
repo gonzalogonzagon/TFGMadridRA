@@ -148,8 +148,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefsKey: Atocha
   infoTitle: Prueba
-  infoText: Probando probando
-  infoImage: {fileID: 21300000, guid: 49dcbd2037cf478419a870b7ed6712cc, type: 3}
+  infoText: Probando Atocha
+  infoImage: {fileID: 21300000, guid: 48f4f060094346342aa0e557b189202e, type: 3}
   infoTitlePicture: Titulo para pic
   infoTextPicture: Content para pic
   objectToMove: {fileID: 1181477325}
@@ -419,8 +419,18 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3934191065955983950, guid: ae09f36e42f0ee041b15c45d9b35546e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1936156609}
   m_SourcePrefab: {fileID: 100100000, guid: ae09f36e42f0ee041b15c45d9b35546e, type: 3}
+--- !u!1 &830524148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3934191065955983950, guid: ae09f36e42f0ee041b15c45d9b35546e,
+    type: 3}
+  m_PrefabInstance: {fileID: 830524147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &901934596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,7 +1054,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1181477326
 Transform:
   m_ObjectHideFlags: 0
@@ -1390,14 +1400,14 @@ MonoBehaviour:
   playerPrefsKey: Palacio
   infoTitle: a
   infoText: b
-  infoImage: {fileID: 21300000, guid: 55fc04030e680f54897c01f0bb503301, type: 3}
-  infoTitlePicture: 
-  infoTextPicture: 
+  infoImage: {fileID: 21300000, guid: e456040c791b2d842812f75a6f197f81, type: 3}
+  infoTitlePicture: dghfhf
+  infoTextPicture: dfgdgfd
   objectToMove: {fileID: 1181477325}
   uiImage: {fileID: 1489859511}
-  infoMarkerScript: {fileID: 0}
-  displayPictureScript: {fileID: 0}
-  warningCanvas: {fileID: 0}
+  infoMarkerScript: {fileID: 1946171273}
+  displayPictureScript: {fileID: 1489859513}
+  warningCanvas: {fileID: 1079910449}
 --- !u!1001 &1420748051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1484,8 +1494,41 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3934191065955983950, guid: ae09f36e42f0ee041b15c45d9b35546e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1420748053}
   m_SourcePrefab: {fileID: 100100000, guid: ae09f36e42f0ee041b15c45d9b35546e, type: 3}
+--- !u!1 &1420748052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3934191065955983950, guid: ae09f36e42f0ee041b15c45d9b35546e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1420748051}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1420748053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420748052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482d1008fe827a9478fe098c13b55390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPrefsKey: Alcala
+  infoTitle: c
+  infoText: d
+  infoImage: {fileID: 21300000, guid: ec47296f27a83134f9ebef250f474eba, type: 3}
+  infoTitlePicture: sgdsfgdfgdf
+  infoTextPicture: fdgf
+  objectToMove: {fileID: 1181477325}
+  uiImage: {fileID: 1489859511}
+  infoMarkerScript: {fileID: 1946171273}
+  displayPictureScript: {fileID: 1489859513}
+  warningCanvas: {fileID: 0}
 --- !u!1 &1426672351
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,6 +1879,29 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 830524147}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1936156609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830524148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482d1008fe827a9478fe098c13b55390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPrefsKey: Plaza
+  infoTitle: e
+  infoText: f
+  infoImage: {fileID: 21300000, guid: a6d476db74b067048b85ed7e2df00d75, type: 3}
+  infoTitlePicture: eeee
+  infoTextPicture: yyyyyy
+  objectToMove: {fileID: 1181477325}
+  uiImage: {fileID: 1489859511}
+  infoMarkerScript: {fileID: 1946171273}
+  displayPictureScript: {fileID: 1489859513}
+  warningCanvas: {fileID: 0}
 --- !u!1001 &1946171270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2038,8 +2104,41 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3934191065955983950, guid: ae09f36e42f0ee041b15c45d9b35546e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2095186708}
   m_SourcePrefab: {fileID: 100100000, guid: ae09f36e42f0ee041b15c45d9b35546e, type: 3}
+--- !u!1 &2095186707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3934191065955983950, guid: ae09f36e42f0ee041b15c45d9b35546e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2095186706}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2095186708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095186707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482d1008fe827a9478fe098c13b55390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPrefsKey: Sol
+  infoTitle: g
+  infoText: h
+  infoImage: {fileID: 21300000, guid: 796e071a045064c488a8182b29de1ccf, type: 3}
+  infoTitlePicture: pe
+  infoTextPicture: pe
+  objectToMove: {fileID: 1181477325}
+  uiImage: {fileID: 1489859511}
+  infoMarkerScript: {fileID: 1946171273}
+  displayPictureScript: {fileID: 1489859513}
+  warningCanvas: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
