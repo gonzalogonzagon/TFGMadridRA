@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SelectActiveObject : MonoBehaviour
 {
-    [Tooltip("Lista de objetos que se pueden activar/desactivar")]
+    [Tooltip("Object list that can be activated/deactivated")]
     public List<GameObject> objectsToManage;
 
     // Llama este método desde el botón, pasando el índice correspondiente

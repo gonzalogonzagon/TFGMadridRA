@@ -35,7 +35,7 @@ public class TextMarkerWithPages : MonoBehaviour, IInteractable
     {
         if (modalTextPages != null)
         {
-            modalTextPages.longText = newText;
+            modalTextPages.LongText = newText;
             modalTextPages.PaginationMode = paginationMode;
             modalTextPages.PaginateText();
             modalTextPages.ShowPage(0);

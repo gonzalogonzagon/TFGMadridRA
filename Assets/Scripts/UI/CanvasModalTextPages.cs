@@ -6,16 +6,13 @@ using UIConstants;
 
 public class CanvasModalTextPages : MonoBehaviour
 {
-    [SerializeField]
-    private TMP_Text textPanel;
-    [SerializeField]
-    private Button buttonNext;
-    [SerializeField]
-    private Button buttonBack;
-    [TextArea]
-    public string longText;
-    [SerializeField]
-    private PaginationMode paginationMode = PaginationMode.ByPeriod;
+    [SerializeField] private Button buttonBack;
+    [SerializeField] private Button buttonNext;
+
+    [SerializeField] private TMP_Text textPanel;
+    [SerializeField] [TextArea] private string longText;
+
+    [SerializeField] private PaginationMode paginationMode = PaginationMode.ByPeriod;
 
     private List<string> pages = new List<string>();
     private int currentPage = 0;
@@ -86,5 +83,11 @@ public class CanvasModalTextPages : MonoBehaviour
     {
         get { return paginationMode; }
         set { paginationMode = value; }
+    }
+
+    public string LongText
+    {
+        get { return longText; }
+        set { longText = value; }
     }
 }
