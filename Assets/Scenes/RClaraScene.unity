@@ -358,6 +358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 102786475}
   hideObjectOnInteract: 1
+  playAppearAnimation: 1
 --- !u!1001 &51734224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -682,6 +683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 1036618400}
   hideObjectOnInteract: 1
+  playAppearAnimation: 1
 --- !u!1 &235265436
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,6 +1660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 1821223504}
   hideObjectOnInteract: 1
+  playAppearAnimation: 1
 --- !u!1001 &596032748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2625,6 +2628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 261524982}
   hideObjectOnInteract: 1
+  playAppearAnimation: 1
 --- !u!1001 &940647430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2697,6 +2701,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3725898365101834666, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5047809646738815492, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
@@ -3718,6 +3727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 243223011}
   hideObjectOnInteract: 1
+  playAppearAnimation: 1
 --- !u!1001 &1711313438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5367,6 +5377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 5077689144356553621}
   hideObjectOnInteract: 0
+  playAppearAnimation: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

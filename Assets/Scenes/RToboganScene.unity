@@ -836,6 +836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 1858915063}
   hideObjectOnInteract: 1
+  playAppearAnimation: 1
 --- !u!1001 &614358007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1412,6 +1413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 233029464}
   hideObjectOnInteract: 1
+  playAppearAnimation: 1
 --- !u!1 &1229333520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,6 +1624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 707574143}
   hideObjectOnInteract: 1
+  playAppearAnimation: 1
 --- !u!1 &1476290976
 GameObject:
   m_ObjectHideFlags: 0

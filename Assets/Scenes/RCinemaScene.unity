@@ -1386,6 +1386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 1702312900}
   hideObjectOnInteract: 1
+  playAppearAnimation: 0
 --- !u!114 &785663871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4319,6 +4320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 396629433}
   hideObjectOnInteract: 1
+  playAppearAnimation: 1
 --- !u!4 &2068858436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
