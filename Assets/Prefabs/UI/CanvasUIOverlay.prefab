@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2911574158889564550}
   - component: {fileID: 6238311299363890334}
   - component: {fileID: 3709198708737059570}
+  - component: {fileID: 4889642455348552379}
   m_Layer: 5
   m_Name: ExitBtn
   m_TagString: Untagged
@@ -120,7 +121,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6238311299363890334}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4889642455348552379}
+        m_TargetAssemblyTypeName: ExitButtonController, Assembly-CSharp
+        m_MethodName: ReturnToAndroidApp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4889642455348552379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087738770005197413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f968639fd2237b44f9fe0aa928e510bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3663020998084488839
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,6 +397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 0}
   hideObjectOnInteract: 0
+  playAppearAnimation: 0
 --- !u!1 &6909310375081657609
 GameObject:
   m_ObjectHideFlags: 0

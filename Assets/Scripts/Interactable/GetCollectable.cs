@@ -5,44 +5,43 @@ using UnityEngine.UI;
 
 public class GetCollectable : MonoBehaviour, IInteractable
 {
-    [SerializeField] private Canvas canvasToShow;
-    [SerializeField] private Image canvasImageDisplay;
-    [SerializeField] private Sprite imageAsset;
     [SerializeField] private string key;
+    [SerializeField] private Sprite imageAsset;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
-    private void Awake()
+    private void Start()
     {
-        if (PlayerPrefs.HasKey(key) && imageAsset != null && spriteRenderer != null)
-            spriteRenderer.sprite = imageAsset;
+        UpdateVisuals();
+
+        CollectablesManager.OnCollectableCollected += HandleCollectableCollected;
+    }
+
+    private void OnDestroy()
+    {
+        CollectablesManager.OnCollectableCollected -= HandleCollectableCollected;
     }
 
     public void Interact()
     {
-        if (!CanInteract())
-        {
-            Debug.Log("Ya has recogido este coleccionable: " + key);
-            return;
-        }
+        if (!CanInteract()) return;
 
-        PlayerPrefs.SetInt(key, 1);
-
-        if (spriteRenderer != null && imageAsset != null)
-        {
-            spriteRenderer.sprite = imageAsset;
-        }
-
-        canvasToShow?.gameObject.SetActive(true);
-        
-        if (canvasImageDisplay != null && imageAsset != null)
-        {
-            canvasImageDisplay.sprite = imageAsset;
-            canvasImageDisplay.preserveAspect = true;
-        }
+        CollectablesManager.Instance.TryCollect(key);
     }
     
     public bool CanInteract()
     {
-        return !PlayerPrefs.HasKey(key);
+        return !CollectablesManager.Instance.IsCollected(key);
+    }
+
+    private void HandleCollectableCollected(string collectedKey)
+    {
+        if (collectedKey == key)
+            UpdateVisuals();
+    }
+    
+    private void UpdateVisuals()
+    {
+        if (CollectablesManager.Instance.IsCollected(key))
+            spriteRenderer.sprite = imageAsset;
     }
 }
