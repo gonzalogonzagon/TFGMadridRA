@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8940816975170741414}
   - component: {fileID: 3542772972204854681}
   m_Layer: 5
-  m_Name: Content
+  m_Name: ContentText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,8 +71,9 @@ MonoBehaviour:
     la movilidad y la vida cotidiana: vacaciones en la costa, visitas a los pueblos,
     nuevos horizontes de libertad."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 540f7f6784f6a5248bae99adbd6c5a1d, type: 2}
+  m_sharedMaterial: {fileID: 1822102944413116546, guid: 540f7f6784f6a5248bae99adbd6c5a1d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -96,7 +97,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 77.85
+  m_fontSize: 70.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

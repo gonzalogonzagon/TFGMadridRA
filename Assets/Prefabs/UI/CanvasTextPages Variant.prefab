@@ -305,10 +305,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Aquel 1 de octubre de 1931 jam\xE1s lo olvidar\xE9. Ante las Cortes, defend\xED
+    con firmeza el derecho de todas las mujeres a votar. Muchos pensaban que no est\xE1bamos
+    preparadas, que votar\xEDamos bajo la influencia de la Iglesia o de nuestros
+    maridos. \r\nYo respond\xED con una simple verdad: \u201CLa mujer necesita la
+    igualdad para ser libre\u201D.\r\nNo fue f\xE1cil: incluso compa\xF1eras como
+    Victoria Kent se opusieron. Pero logr\xE9 que se aprobara el art\xEDculo 36 de
+    nuestra Constituci\xF3n. Aquella fue una victoria para todas las espa\xF1olas."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 540f7f6784f6a5248bae99adbd6c5a1d, type: 2}
+  m_sharedMaterial: {fileID: 1822102944413116546, guid: 540f7f6784f6a5248bae99adbd6c5a1d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -332,7 +339,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 56.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

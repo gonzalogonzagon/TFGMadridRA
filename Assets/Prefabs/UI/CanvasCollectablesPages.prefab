@@ -187,10 +187,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Puerta del Sol
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 540f7f6784f6a5248bae99adbd6c5a1d, type: 2}
+  m_sharedMaterial: {fileID: 1822102944413116546, guid: 540f7f6784f6a5248bae99adbd6c5a1d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -214,12 +215,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 78
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 78
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -731,21 +732,6 @@ MonoBehaviour:
   iconButton: {fileID: 282093052548420866}
   eyeHintIcon: {fileID: 21300000, guid: 7d4868c98a7fb5749b5fb24a93f7e9fd, type: 3}
   hintCheckIcon: {fileID: 21300000, guid: 01ab349eb4e36e544b3e1d819eb43a38, type: 3}
-  canvasToShow: {fileID: 0}
-  canvasImageDisplay: {fileID: 0}
-  titlePages:
-  - "Estaci\xF3n de Atocha"
-  - Palacio Real
-  - Plaza Mayor
-  imagePages:
-  - {fileID: 21300000, guid: 48f4f060094346342aa0e557b189202e, type: 3}
-  - {fileID: 21300000, guid: 49dcbd2037cf478419a870b7ed6712cc, type: 3}
-  - {fileID: 21300000, guid: ec47296f27a83134f9ebef250f474eba, type: 3}
-  postcardList: []
-  keys:
-  - Atocha
-  - Palacio
-  - Plaza
 --- !u!1 &7185416305066320875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,8 +994,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Descubir
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2f08103db3eae31499413f5684dcce91, type: 2}
+  m_sharedMaterial: {fileID: -7608178422878251549, guid: 2f08103db3eae31499413f5684dcce91,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1033,7 +1020,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 69.55
+  m_fontSize: 66.5
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
