@@ -148,17 +148,17 @@ PrefabInstance:
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.47917652
+      value: -0.443
       objectReference: {fileID: 0}
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.281
+      value: 1.303
       objectReference: {fileID: 0}
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.299588
+      value: -10.318
       objectReference: {fileID: 0}
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
@@ -367,19 +367,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 35851626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b99c9854029fcf479cafa25df33e094, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c3da2f447dc03849bb637a622e75d39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1307399100}
   touchManager: {fileID: 63204973}
   newCameraPosition: {x: -0.06, y: 1.75, z: -10}
   lookAtTarget: {fileID: 955480172}
-  buttonsToEnable:
-  - {fileID: 1010850141}
-  buttonsToDisable:
-  - {fileID: 924346502}
-  - {fileID: 774913774}
-  - {fileID: 644804838}
+  currentFocusObject: {fileID: 924346502}
+  nextFocusObject: {fileID: 1010850141}
 --- !u!1001 &63204972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -543,8 +539,8 @@ Transform:
   m_GameObject: {fileID: 126255396}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.31244394, z: -0, w: 0.9499362}
-  m_LocalPosition: {x: -0.34852147, y: 0.08099997, z: -0.3280239}
-  m_LocalScale: {x: 0.054999992, y: 0.055, z: 0.054999992}
+  m_LocalPosition: {x: -0.404, y: 0.08099997, z: -0.3280239}
+  m_LocalScale: {x: 0.055, y: 0.055, z: 0.055}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1033190711}
@@ -995,7 +991,7 @@ PrefabInstance:
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.44058895
+      value: 0.4154
       objectReference: {fileID: 0}
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
@@ -1005,7 +1001,7 @@ PrefabInstance:
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.155582
+      value: -10.1679
       objectReference: {fileID: 0}
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
@@ -1700,8 +1696,8 @@ Transform:
   m_GameObject: {fileID: 830253609}
   serializedVersion: 2
   m_LocalRotation: {x: 0.10400116, y: -0.09976876, z: 0.0104861185, w: 0.98950493}
-  m_LocalPosition: {x: 0.09289348, y: -0.5450001, z: -0.2605486}
-  m_LocalScale: {x: 0.071716115, y: 0.0717161, z: 0.071716115}
+  m_LocalPosition: {x: 0.09289348, y: -0.645, z: -0.2605486}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1033190711}
@@ -1787,7 +1783,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1599020884206801757, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 831553345}
+      addedObject: {fileID: 831553350}
   m_SourcePrefab: {fileID: 100100000, guid: 40bebdbb2b1984b408d9fe185ddf6a13, type: 3}
 --- !u!1 &831553344 stripped
 GameObject:
@@ -1795,7 +1791,13 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 831553343}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &831553345
+--- !u!4 &831553346 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6185180275775590607, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
+    type: 3}
+  m_PrefabInstance: {fileID: 831553343}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &831553350
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1804,25 +1806,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 831553344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b99c9854029fcf479cafa25df33e094, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c3da2f447dc03849bb637a622e75d39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1307399100}
   touchManager: {fileID: 63204973}
   newCameraPosition: {x: -0.06, y: 1.75, z: -10}
   lookAtTarget: {fileID: 955480172}
-  buttonsToEnable:
-  - {fileID: 1010850141}
-  buttonsToDisable:
-  - {fileID: 774913774}
-  - {fileID: 924346502}
-  - {fileID: 644804838}
---- !u!4 &831553346 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6185180275775590607, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
-    type: 3}
-  m_PrefabInstance: {fileID: 831553343}
-  m_PrefabAsset: {fileID: 0}
+  currentFocusObject: {fileID: 644804838}
+  nextFocusObject: {fileID: 1010850141}
 --- !u!1001 &839517939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1904,7 +1896,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1599020884206801757, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 839517942}
+      addedObject: {fileID: 839517946}
   m_SourcePrefab: {fileID: 100100000, guid: 40bebdbb2b1984b408d9fe185ddf6a13, type: 3}
 --- !u!4 &839517940 stripped
 Transform:
@@ -1918,7 +1910,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 839517939}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &839517942
+--- !u!114 &839517946
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1927,19 +1919,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 839517941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b99c9854029fcf479cafa25df33e094, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c3da2f447dc03849bb637a622e75d39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1307399100}
   touchManager: {fileID: 63204973}
   newCameraPosition: {x: 0.3, y: 1.8, z: -11.78}
   lookAtTarget: {fileID: 1210450183}
-  buttonsToEnable:
-  - {fileID: 774913774}
-  buttonsToDisable:
-  - {fileID: 924346502}
-  - {fileID: 1010850141}
-  - {fileID: 644804838}
+  currentFocusObject: {fileID: 924346502}
+  nextFocusObject: {fileID: 774913774}
 --- !u!1001 &851413204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1951,17 +1939,17 @@ PrefabInstance:
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.018000001
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.018
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.018000001
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
@@ -1971,32 +1959,32 @@ PrefabInstance:
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.29900002
+      value: -0.294
       objectReference: {fileID: 0}
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.15292549
+      value: -0.175
       objectReference: {fileID: 0}
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9949554
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.10031831
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
@@ -2006,7 +1994,7 @@ PrefabInstance:
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
@@ -2377,7 +2365,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 566d7716906376649b343d24ba8765ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2550,7 +2538,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 566d7716906376649b343d24ba8765ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2987,7 +2975,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 566d7716906376649b343d24ba8765ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3712,7 +3700,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1599020884206801757, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1503463748}
+      addedObject: {fileID: 1503463756}
   m_SourcePrefab: {fileID: 100100000, guid: 40bebdbb2b1984b408d9fe185ddf6a13, type: 3}
 --- !u!1 &1503463747 stripped
 GameObject:
@@ -3720,7 +3708,13 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1503463746}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1503463748
+--- !u!4 &1503463752 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6185180275775590607, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
+    type: 3}
+  m_PrefabInstance: {fileID: 1503463746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1503463756
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3729,25 +3723,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1503463747}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b99c9854029fcf479cafa25df33e094, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c3da2f447dc03849bb637a622e75d39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1307399100}
   touchManager: {fileID: 63204973}
   newCameraPosition: {x: 1.782, y: 1.8, z: -9.874}
   lookAtTarget: {fileID: 591048863}
-  buttonsToEnable:
-  - {fileID: 924346502}
-  buttonsToDisable:
-  - {fileID: 1010850141}
-  - {fileID: 644804838}
-  - {fileID: 774913774}
---- !u!4 &1503463752 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6185180275775590607, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
-    type: 3}
-  m_PrefabInstance: {fileID: 1503463746}
-  m_PrefabAsset: {fileID: 0}
+  currentFocusObject: {fileID: 774913774}
+  nextFocusObject: {fileID: 924346502}
 --- !u!1 &1520690264
 GameObject:
   m_ObjectHideFlags: 0
@@ -3946,7 +3930,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1599020884206801757, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1639932273}
+      addedObject: {fileID: 1639932278}
   m_SourcePrefab: {fileID: 100100000, guid: 40bebdbb2b1984b408d9fe185ddf6a13, type: 3}
 --- !u!1 &1639932272 stripped
 GameObject:
@@ -3954,7 +3938,13 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1639932271}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1639932273
+--- !u!4 &1639932277 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6185180275775590607, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
+    type: 3}
+  m_PrefabInstance: {fileID: 1639932271}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1639932278
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3963,25 +3953,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1639932272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b99c9854029fcf479cafa25df33e094, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c3da2f447dc03849bb637a622e75d39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1307399100}
   touchManager: {fileID: 63204973}
   newCameraPosition: {x: -1.68, y: 1.8, z: -10.59}
   lookAtTarget: {fileID: 160380405}
-  buttonsToEnable:
-  - {fileID: 644804838}
-  buttonsToDisable:
-  - {fileID: 1010850141}
-  - {fileID: 924346502}
-  - {fileID: 774913774}
---- !u!4 &1639932277 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6185180275775590607, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
-    type: 3}
-  m_PrefabInstance: {fileID: 1639932271}
-  m_PrefabAsset: {fileID: 0}
+  currentFocusObject: {fileID: 1010850141}
+  nextFocusObject: {fileID: 644804838}
 --- !u!1001 &1881942394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4063,7 +4043,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1599020884206801757, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1881942402}
+      addedObject: {fileID: 1881942407}
   m_SourcePrefab: {fileID: 100100000, guid: 40bebdbb2b1984b408d9fe185ddf6a13, type: 3}
 --- !u!1 &1881942396 stripped
 GameObject:
@@ -4071,7 +4051,13 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1881942394}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1881942402
+--- !u!4 &1881942406 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6185180275775590607, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
+    type: 3}
+  m_PrefabInstance: {fileID: 1881942394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1881942407
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4080,25 +4066,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1881942396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b99c9854029fcf479cafa25df33e094, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c3da2f447dc03849bb637a622e75d39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1307399100}
   touchManager: {fileID: 63204973}
   newCameraPosition: {x: 1.782, y: 1.8, z: -9.874}
   lookAtTarget: {fileID: 591048863}
-  buttonsToEnable:
-  - {fileID: 924346502}
-  buttonsToDisable:
-  - {fileID: 1010850141}
-  - {fileID: 644804838}
-  - {fileID: 774913774}
---- !u!4 &1881942406 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6185180275775590607, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
-    type: 3}
-  m_PrefabInstance: {fileID: 1881942394}
-  m_PrefabAsset: {fileID: 0}
+  currentFocusObject: {fileID: 1010850141}
+  nextFocusObject: {fileID: 924346502}
 --- !u!1001 &1888248577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4300,7 +4276,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1599020884206801757, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1904139632}
+      addedObject: {fileID: 1904139640}
   m_SourcePrefab: {fileID: 100100000, guid: 40bebdbb2b1984b408d9fe185ddf6a13, type: 3}
 --- !u!1 &1904139631 stripped
 GameObject:
@@ -4308,7 +4284,13 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1904139630}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1904139632
+--- !u!4 &1904139636 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6185180275775590607, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
+    type: 3}
+  m_PrefabInstance: {fileID: 1904139630}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1904139640
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4317,25 +4299,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1904139631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b99c9854029fcf479cafa25df33e094, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c3da2f447dc03849bb637a622e75d39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1307399100}
   touchManager: {fileID: 63204973}
   newCameraPosition: {x: -1.68, y: 1.8, z: -10.59}
   lookAtTarget: {fileID: 160380405}
-  buttonsToEnable:
-  - {fileID: 644804838}
-  buttonsToDisable:
-  - {fileID: 774913774}
-  - {fileID: 924346502}
-  - {fileID: 1010850141}
---- !u!4 &1904139636 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6185180275775590607, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
-    type: 3}
-  m_PrefabInstance: {fileID: 1904139630}
-  m_PrefabAsset: {fileID: 0}
+  currentFocusObject: {fileID: 774913774}
+  nextFocusObject: {fileID: 644804838}
 --- !u!1001 &1907621184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4540,7 +4512,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1599020884206801757, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2070911406}
+      addedObject: {fileID: 2070911411}
   m_SourcePrefab: {fileID: 100100000, guid: 40bebdbb2b1984b408d9fe185ddf6a13, type: 3}
 --- !u!1 &2070911405 stripped
 GameObject:
@@ -4548,7 +4520,13 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2070911404}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2070911406
+--- !u!4 &2070911407 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6185180275775590607, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
+    type: 3}
+  m_PrefabInstance: {fileID: 2070911404}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2070911411
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4557,25 +4535,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2070911405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b99c9854029fcf479cafa25df33e094, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c3da2f447dc03849bb637a622e75d39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1307399100}
   touchManager: {fileID: 63204973}
   newCameraPosition: {x: 0.3, y: 1.8, z: -11.78}
   lookAtTarget: {fileID: 1210450183}
-  buttonsToEnable:
-  - {fileID: 774913774}
-  buttonsToDisable:
-  - {fileID: 644804838}
-  - {fileID: 924346502}
-  - {fileID: 1010850141}
---- !u!4 &2070911407 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6185180275775590607, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
-    type: 3}
-  m_PrefabInstance: {fileID: 2070911404}
-  m_PrefabAsset: {fileID: 0}
+  currentFocusObject: {fileID: 644804838}
+  nextFocusObject: {fileID: 774913774}
 --- !u!1 &2075225676
 GameObject:
   m_ObjectHideFlags: 0

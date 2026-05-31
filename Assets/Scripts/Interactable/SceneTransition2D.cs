@@ -15,21 +15,10 @@ public class SceneTransition2D : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        // Turn off the current
-        if (currentFocusObject != null)
-        {
-            currentFocusObject.SetActive(false);
-        }
-
-        // Turn on the new
-        if (nextFocusObject != null)
-        {
-            nextFocusObject.SetActive(true);
-
-            // Update the target in the touch manager
-            touchManager.SetTargetContent(nextFocusObject.transform, minOrthoSize, maxOrthoSize, initialOrthoSize);
-
-        }
+        currentFocusObject?.SetActive(false);
+        nextFocusObject?.SetActive(true);
+        
+        touchManager?.SetTargetContent(nextFocusObject.transform, minOrthoSize, maxOrthoSize, initialOrthoSize);
     }
 
     public bool CanInteract()

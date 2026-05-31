@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShowInfoMapPostcard : MonoBehaviour, IInteractable
+public class Postcard : MonoBehaviour, IInteractable
 {
     [SerializeField] private string postcardKey;
-    [SerializeField] private Sprite imageAsset;
-    [SerializeField] private SpriteRenderer spriteRenderer;
 
-    private void Awake()
+    private void Start()
     {
-        if (!PostcardsManager.Instance.IsCollected(postcardKey))
+        if (PostcardsManager.Instance.IsCollected(postcardKey))
         {
-            spriteRenderer.sprite = imageAsset;
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = PostcardsManager.Instance.GetPostcard(postcardKey)?.Postcard;
         }
     }
-
+    
     public void Interact()
     {
         PostcardsManager.Instance.ShowPostcard(postcardKey, transform.position);

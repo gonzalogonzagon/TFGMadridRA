@@ -10,29 +10,28 @@ public class PostcardItem
 {
     [SerializeField] private string key;
     [SerializeField] private string title;
-    [SerializeField] private Sprite preview;
     [SerializeField] private Sprite postcard;
     [SerializeField] private Sprite pastPicture;
+    [SerializeField] private Sprite presentPicture;
 
     public string Key => key;
     public string Title => title;
-    public Sprite Preview => preview;
     public Sprite Postcard => postcard;
     public Sprite PastPicture => pastPicture;
+    public Sprite PresentPicture => presentPicture;
 }
 
 public class PostcardsManager : MonoBehaviour
 {
     [SerializeField] private List<PostcardItem> postcards;
-    // [SerializeField] private Canvas rewardCanvas;
-    // [SerializeField] private Image rewardImageDisplay;
+    
     [SerializeField] private GameObject objectToMove;
 
+    [SerializeField] private Sprite defaultImage;
     [SerializeField] private string infoTitlePicture;
-    [SerializeField] private SpriteRenderer postcardImage;
-
-    [SerializeField] private TextMarkerWithTitle infoMarkerScript;
-    [SerializeField] private DisplayPicture displayPictureScript;
+    [SerializeField] private Image postcardImageRenderer;
+    [SerializeField] private Image pastPictureRenderer;
+    [SerializeField] private Image presentPictureRenderer;
     
     public static PostcardsManager Instance { get; private set; }
     
@@ -50,10 +49,17 @@ public class PostcardsManager : MonoBehaviour
     public void ShowPostcard(string key, Vector3 positionToMove)
     {
         PostcardItem postcard = GetPostcard(key);
-        if (postcard == null)
+
+        presentPictureRenderer.sprite = postcard != null && postcard.PresentPicture != null ? postcard.PresentPicture : defaultImage;
+        pastPictureRenderer.sprite = postcard != null && postcard.PastPicture != null ? postcard.PastPicture : defaultImage;
+
+        if (!IsCollected(key))
         {
-            Debug.LogWarning("Postcard with key " + key + " not found.");
-            return;
+            postcardImageRenderer.sprite = defaultImage;
+
+        } else
+        {
+            postcardImageRenderer.sprite = postcard != null && postcard.Postcard != null ? postcard.Postcard : defaultImage;
         }
 
         if (objectToMove != null)
@@ -62,18 +68,7 @@ public class PostcardsManager : MonoBehaviour
             objectToMove.transform.position = positionToMove;
         }
 
-        if (postcardImage != null)
-        {
-            postcardImage.sprite = postcard.Preview;
-
-            Vector2 size = postcardImage.sprite.bounds.size;
-
-            // Ajustar la escala del objeto para que tenga un tamaño deseado
-            float desiredWidth = 0.5f; // 1 unidad en el mundo
-            float scale = desiredWidth / size.x;
-
-            postcardImage.transform.localScale = new Vector3(scale, scale, 1f);
-        }
+        StartCoroutine(AppearAnimation(objectToMove));
 
     }
 
@@ -83,4 +78,23 @@ public class PostcardsManager : MonoBehaviour
         => postcards.Find(p => p.Key == key);
 
     public List<PostcardItem> GetAllPostcards() => postcards;
+
+    private IEnumerator AppearAnimation(GameObject obj)
+    {
+        Vector3 originalScale = obj.transform.localScale;
+        obj.transform.localScale = Vector3.zero;
+
+        float appearDuration = 0.3f;
+        float time = 0f;
+
+        while (time < appearDuration)
+        {
+            float t = time / appearDuration;
+            obj.transform.localScale = Vector3.Lerp(Vector3.zero, originalScale, t);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        obj.transform.localScale = originalScale;
+    }
 }
