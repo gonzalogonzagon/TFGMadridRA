@@ -28,10 +28,7 @@ public class GetCollectable : MonoBehaviour, IInteractable
         CollectablesManager.Instance.TryCollect(key);
     }
     
-    public bool CanInteract()
-    {
-        return !CollectablesManager.Instance.IsCollected(key);
-    }
+    public bool CanInteract() => !CollectablesManager.Instance.IsCollected(key);
 
     private void HandleCollectableCollected(string collectedKey)
     {

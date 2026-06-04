@@ -2,9 +2,6 @@ using UnityEngine;
 
 public interface IInteractable
 {
-    // Main method to handle interaction logic
-    void Interact();
-
-    // Method to check if interaction is possible
-    bool CanInteract();
+    void Interact();    // What to do when interacted with?
+    bool CanInteract(); // Is it possible to interact now?
 }

@@ -507,7 +507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flipFace: 1
-  useWorldUp: 0
+  useWorldUp: 1
 --- !u!212 &233029466
 SpriteRenderer:
   m_ObjectHideFlags: 0

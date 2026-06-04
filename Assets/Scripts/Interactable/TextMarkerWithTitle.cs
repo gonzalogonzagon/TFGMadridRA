@@ -13,8 +13,9 @@ public class TextMarkerWithTitle : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (canvasToShow != null)
-            canvasToShow.gameObject.SetActive(true);
+        if (!CanInteract()) return;
+        
+        canvasToShow?.gameObject.SetActive(true);
             
         if (titleField != null)
             titleField.text = infoTitle;
@@ -27,30 +28,27 @@ public class TextMarkerWithTitle : MonoBehaviour, IInteractable
             Debug.LogWarning("No se ha asignado el campo de descripción a InfoMarker1.");
     }
 
-    public bool CanInteract()
+    public bool CanInteract() => enabled && gameObject.activeInHierarchy;
+
+    public string InfoDescription
     {
-        return true;
+        get => infoDescription;
+        set
+        {
+            infoDescription = value;
+            if (descriptionField != null)
+                descriptionField.text = infoDescription;
+        }
     }
 
-    public string getInfoDescription()
+    public string InfoTitle
     {
-        return infoDescription;
-    }
-    public void setInfoDescription(string description)
-    {
-        infoDescription = description;
-        if (descriptionField != null)
-            descriptionField.text = infoDescription;
-    }
-
-    public string getInfoTitle()
-    {
-        return infoTitle;
-    }
-    public void setInfoTitle(string title)
-    {
-        infoTitle = title;
-        if (titleField != null)
-            titleField.text = infoTitle;
+        get => infoTitle;
+        set
+        {
+            infoTitle = value;
+            if (titleField != null)
+                titleField.text = infoTitle;
+        }
     }
 }

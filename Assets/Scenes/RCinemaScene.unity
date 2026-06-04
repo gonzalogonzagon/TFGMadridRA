@@ -1256,7 +1256,6 @@ GameObject:
   - component: {fileID: 621102505}
   - component: {fileID: 621102504}
   - component: {fileID: 621102503}
-  - component: {fileID: 621102502}
   m_Layer: 0
   m_Name: CanvasScreen
   m_TagString: Untagged
@@ -1284,21 +1283,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.10999942, y: 1.3339996}
   m_SizeDelta: {x: 720, y: 480}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &621102502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 621102500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de1b835084d862d47a31aaa440cc9c76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  videoPlayer: {fileID: 2118026790}
-  playButtonObject: {fileID: 1284749217}
-  canvasToDisable: {fileID: 621102505}
 --- !u!114 &621102503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2344,7 +2328,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1277342754371820462, guid: 3c35d12974544d54c951658b9b7cceb2,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1284749218}
+      addedObject: {fileID: 1284749220}
   m_SourcePrefab: {fileID: 100100000, guid: 3c35d12974544d54c951658b9b7cceb2, type: 3}
 --- !u!1 &1284749217 stripped
 GameObject:
@@ -2352,7 +2336,13 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1284749216}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1284749218
+--- !u!4 &1284749219 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1284749216}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1284749220
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2361,17 +2351,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1284749217}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a92cd6c5f6d69546aa9913c9445d500, type: 3}
+  m_Script: {fileID: 11500000, guid: de1b835084d862d47a31aaa440cc9c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObject: {fileID: 621102500}
-  hideObjectOnInteract: 0
---- !u!4 &1284749219 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1284749216}
-  m_PrefabAsset: {fileID: 0}
+  videoPlayer: {fileID: 2118026790}
+  playButtonObject: {fileID: 1284749217}
+  canvasToShow: {fileID: 621102505}
 --- !u!1 &1294380255
 GameObject:
   m_ObjectHideFlags: 0

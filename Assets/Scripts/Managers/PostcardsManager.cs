@@ -32,6 +32,10 @@ public class PostcardsManager : MonoBehaviour
     [SerializeField] private Image postcardImageRenderer;
     [SerializeField] private Image pastPictureRenderer;
     [SerializeField] private Image presentPictureRenderer;
+
+    [SerializeField] private Canvas postcardWarningCanvas;
+    [SerializeField] private Image warningImageDisplay;
+    [SerializeField] private TMP_Text warningTitleText;
     
     public static PostcardsManager Instance { get; private set; }
     
@@ -48,19 +52,17 @@ public class PostcardsManager : MonoBehaviour
 
     public void ShowPostcard(string key, Vector3 positionToMove)
     {
+        if (!IsCollected(key))
+        {
+            ShowPostcardWarning(key);
+            return;
+        }
+
         PostcardItem postcard = GetPostcard(key);
 
         presentPictureRenderer.sprite = postcard != null && postcard.PresentPicture != null ? postcard.PresentPicture : defaultImage;
         pastPictureRenderer.sprite = postcard != null && postcard.PastPicture != null ? postcard.PastPicture : defaultImage;
-
-        if (!IsCollected(key))
-        {
-            postcardImageRenderer.sprite = defaultImage;
-
-        } else
-        {
-            postcardImageRenderer.sprite = postcard != null && postcard.Postcard != null ? postcard.Postcard : defaultImage;
-        }
+        postcardImageRenderer.sprite = postcard != null && postcard.Postcard != null ? postcard.Postcard : defaultImage;
 
         if (objectToMove != null)
         {
@@ -96,5 +98,29 @@ public class PostcardsManager : MonoBehaviour
         }
 
         obj.transform.localScale = originalScale;
+    }
+
+    public void ShowPostcardWarning(string key)
+    {
+        PostcardItem postcard = GetPostcard(key);
+
+        if (postcard == null)
+        {
+            Debug.LogWarning($"Postcard with key '{key}' not found");
+            return;
+        }
+
+        if (warningImageDisplay != null && postcard.PresentPicture != null)
+        {
+            warningImageDisplay.sprite = postcard.PresentPicture;
+            warningImageDisplay.preserveAspect = true;
+        }
+
+        if (warningTitleText != null)
+        {
+            warningTitleText.text = postcard.Title;
+        }
+
+        postcardWarningCanvas?.gameObject.SetActive(true);
     }
 }

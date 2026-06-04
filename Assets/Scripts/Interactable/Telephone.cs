@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Telephone : MonoBehaviour, IInteractable
 {
-    public AudioSource audioSource;
-    public GameObject marker;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private GameObject marker;
     private bool isPlaying = false;
     
     public void Interact()
@@ -18,10 +18,7 @@ public class Telephone : MonoBehaviour, IInteractable
         }
     }
 
-    public bool CanInteract()
-    {
-        return !isPlaying && audioSource != null && !audioSource.isPlaying;
-    }
+    public bool CanInteract() => !isPlaying && audioSource != null && !audioSource.isPlaying;
 
     private IEnumerator ShowMarkerWhenAudioEnds()
     {

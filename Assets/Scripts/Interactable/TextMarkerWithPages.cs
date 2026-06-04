@@ -11,38 +11,31 @@ public class TextMarkerWithPages : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (canvasToShow != null)
-            canvasToShow.gameObject.SetActive(true);
+        if (!CanInteract()) return;
 
+        canvasToShow?.gameObject.SetActive(true);
         ChangeContent(infoDescription);
     }
 
-    public bool CanInteract()
-    {
-        return true;
-    }
+    public bool CanInteract() => enabled && gameObject.activeInHierarchy;
 
-    public string getInfoDescription()
+    public string InfoDescription
     {
-        return infoDescription;
-    }
-    public void setInfoDescription(string description)
-    {
-        infoDescription = description;
+        get => infoDescription;
+        set => infoDescription = value;
     }
 
     public void ChangeContent(string newText)
     {
-        if (modalTextPages != null)
-        {
-            modalTextPages.LongText = newText;
-            modalTextPages.PaginationMode = paginationMode;
-            modalTextPages.PaginateText();
-            modalTextPages.ShowPage(0);
-        }
-        else
+        if (modalTextPages == null)
         {
             Debug.LogWarning("Please assign the reference to CanvasModalTextPages in TextMarkerWithPages.");
+            return;
         }
+
+        modalTextPages.LongText = newText;
+        modalTextPages.PaginationMode = paginationMode;
+        modalTextPages.PaginateText();
+        modalTextPages.ShowPage(0);
     }
 }

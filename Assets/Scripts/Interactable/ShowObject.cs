@@ -11,6 +11,8 @@ public class ShowObject : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if (!CanInteract()) return;
+        
         if (targetObject == null)
         {
             Debug.LogWarning("Target object is not assigned in ShowObject on " + gameObject.name);
@@ -26,11 +28,8 @@ public class ShowObject : MonoBehaviour, IInteractable
             HideSelf();
     }
 
-    public bool CanInteract()
-    {
-        // Interaction is only possible if the component is enabled and the GameObject is active in the hierarchy.
-        return enabled && gameObject.activeInHierarchy;
-    }
+    // Interaction is only possible if the component is enabled and the GameObject is active in the hierarchy
+    public bool CanInteract() => enabled && gameObject.activeInHierarchy;
 
     private void HideSelf()
     {

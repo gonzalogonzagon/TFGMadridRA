@@ -10,28 +10,25 @@ public class TextMarker : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if (!CanInteract()) return;
+
         if (canvasToShow != null)
             canvasToShow.gameObject.SetActive(true);
 
         if (descriptionField != null)
             descriptionField.text = infoDescription;
-        else
-            Debug.LogWarning("No se ha asignado el campo de descripción a TextMarker.");
     }
 
-    public bool CanInteract()
-    {
-        return true;
-    }
+    public bool CanInteract() => enabled && gameObject.activeInHierarchy;
 
-    public string getInfoDescription()
+    public string InfoDescription
     {
-        return infoDescription;
-    }
-    public void setInfoDescription(string description)
-    {
-        infoDescription = description;
-        if (descriptionField != null)
-            descriptionField.text = infoDescription;
+        get => infoDescription;
+        set
+        {
+            infoDescription = value;
+            if (descriptionField != null)
+                descriptionField.text = infoDescription;
+        }
     }
 }

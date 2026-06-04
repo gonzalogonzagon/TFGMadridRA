@@ -349,7 +349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &291597762
 Transform:
   m_ObjectHideFlags: 0
@@ -624,6 +624,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 447248452}
+    - targetCorrespondingSourceObject: {fileID: 5047809646738815492, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 447248456}
   m_SourcePrefab: {fileID: 100100000, guid: 92bc0ca5b1826a8429fa92a965961f03, type: 3}
 --- !u!1 &447248451 stripped
 GameObject:
@@ -658,6 +662,20 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 447248450}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &447248456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447248451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9426aae0620c82b46b79010283755380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flipFace: 1
+  useWorldUp: 1
 --- !u!1001 &459566900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -771,11 +789,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 459566902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a92cd6c5f6d69546aa9913c9445d500, type: 3}
+  m_Script: {fileID: 11500000, guid: de1b835084d862d47a31aaa440cc9c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObject: {fileID: 1031008246}
-  hideObjectOnInteract: 0
+  videoPlayer: {fileID: 704214098}
+  playButtonObject: {fileID: 459566902}
+  canvasToShow: {fileID: 1031008250}
 --- !u!1001 &470264590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1040,6 +1059,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SceneTransitionIn
+      objectReference: {fileID: 0}
+    - target: {fileID: 3311333714572285518, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
+        type: 3}
+      propertyPath: useWorldUp
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6185180275775590607, guid: 40bebdbb2b1984b408d9fe185ddf6a13,
         type: 3}
@@ -2308,6 +2332,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1025275385}
+    - targetCorrespondingSourceObject: {fileID: 5047809646738815492, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1025275388}
   m_SourcePrefab: {fileID: 100100000, guid: 92bc0ca5b1826a8429fa92a965961f03, type: 3}
 --- !u!4 &1025275383 stripped
 Transform:
@@ -2339,6 +2367,20 @@ MonoBehaviour:
   infoTitle: Garbancito de la mancha
   infoDescription: "Se trata del primer largometraje de animaci\xF3n filmado en Europa.
     (Jos\xE9 Mar\xEDa Blay y Arturo Moreno, 1945)"
+--- !u!114 &1025275388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025275384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9426aae0620c82b46b79010283755380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flipFace: 1
+  useWorldUp: 1
 --- !u!1 &1031008246
 GameObject:
   m_ObjectHideFlags: 0
@@ -2351,7 +2393,6 @@ GameObject:
   - component: {fileID: 1031008250}
   - component: {fileID: 1031008249}
   - component: {fileID: 1031008248}
-  - component: {fileID: 1031008247}
   m_Layer: 0
   m_Name: CanvasScreen
   m_TagString: Untagged
@@ -2359,21 +2400,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1031008247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1031008246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de1b835084d862d47a31aaa440cc9c76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  videoPlayer: {fileID: 704214098}
-  playButtonObject: {fileID: 459566902}
-  canvasToDisable: {fileID: 1031008250}
 --- !u!114 &1031008248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2602,6 +2628,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: InfoMarker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062145424275578557, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: useWorldUp
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
         type: 3}
@@ -2996,6 +3027,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: InfoMPictureData
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062145424275578557, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: useWorldUp
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
         type: 3}
@@ -3802,6 +3838,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1450448557}
+    - targetCorrespondingSourceObject: {fileID: 5047809646738815492, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1450448560}
   m_SourcePrefab: {fileID: 100100000, guid: 92bc0ca5b1826a8429fa92a965961f03, type: 3}
 --- !u!4 &1450448555 stripped
 Transform:
@@ -3833,6 +3873,20 @@ MonoBehaviour:
   infoTitle: El misterio de la Puerta del Sol
   infoDescription: "Primer largometraje parcialmente sonoro de la historia del cine
     espa\xF1ol. (Francisco El\xEDas, 1930)"
+--- !u!114 &1450448560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450448556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9426aae0620c82b46b79010283755380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flipFace: 1
+  useWorldUp: 1
 --- !u!1001 &1507605059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4157,7 +4211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1572396477
 Transform:
   m_ObjectHideFlags: 0
@@ -4635,6 +4689,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1905385510}
+    - targetCorrespondingSourceObject: {fileID: 5047809646738815492, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1905385513}
   m_SourcePrefab: {fileID: 100100000, guid: 92bc0ca5b1826a8429fa92a965961f03, type: 3}
 --- !u!4 &1905385508 stripped
 Transform:
@@ -4671,6 +4729,20 @@ MonoBehaviour:
     Par\xEDs, pioneros del cine. Aunque su lugar como la primera pel\xEDcula espa\xF1ola
     ha sido objeto de debate y revisiones hist\xF3ricas, Jimeno es reconocido como
     uno de los pioneros que sentaron las bases del cine en Espa\xF1a."
+--- !u!114 &1905385513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905385509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9426aae0620c82b46b79010283755380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flipFace: 1
+  useWorldUp: 1
 --- !u!1001 &1936051597
 PrefabInstance:
   m_ObjectHideFlags: 0

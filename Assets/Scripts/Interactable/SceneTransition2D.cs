@@ -15,15 +15,14 @@ public class SceneTransition2D : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if (!CanInteract()) return;
+        
         currentFocusObject?.SetActive(false);
         nextFocusObject?.SetActive(true);
         
         touchManager?.SetTargetContent(nextFocusObject.transform, minOrthoSize, maxOrthoSize, initialOrthoSize);
     }
 
-    public bool CanInteract()
-    {
-        return true;
-    }
+    public bool CanInteract() => enabled && gameObject.activeInHierarchy;
 
 }

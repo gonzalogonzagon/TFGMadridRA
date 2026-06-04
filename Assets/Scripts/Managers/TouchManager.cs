@@ -24,8 +24,6 @@ public class TouchManager : MonoBehaviour
     [SerializeField]
     private float dragThreshold = 0.2f; // Threshold to distinguish between tap and drag
 
-    [SerializeField] private GameObject infoPanel; // Hides info panel when no interactable is touched
-
     // Lifecycle methods ------------------------------------------------------------
     private void Awake()
     {   
@@ -88,7 +86,6 @@ public class TouchManager : MonoBehaviour
                 return;
             }
         }
-        if (infoPanel != null && infoPanel.activeSelf) infoPanel.SetActive(false);
     }
 
     private bool IsPointerOverUI(Vector2 touchPosition)
