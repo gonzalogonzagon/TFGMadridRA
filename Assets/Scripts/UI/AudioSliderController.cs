@@ -4,20 +4,13 @@ using TMPro;
 
 public class AudioSliderController : MonoBehaviour
 {
-    [SerializeField]
-    private AudioSource audioSource;
-    [SerializeField]
-    private Slider audioSlider;
-    [SerializeField]
-    private TMP_Text durationText;
-    [SerializeField]
-    private Button btnPlayPause;
-    [SerializeField]
-    private Button btnReset;
-    [SerializeField]
-    private Sprite playIcon;
-    [SerializeField]
-    private Sprite pauseIcon;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private Slider audioSlider;
+    [SerializeField] private TMP_Text durationText;
+    [SerializeField] private Button btnPlayPause;
+    [SerializeField] private Button btnReset;
+    [SerializeField] private Sprite playIcon;
+    [SerializeField] private Sprite pauseIcon;
 
     private bool isDragging = false;
     private bool isPlaying = false;

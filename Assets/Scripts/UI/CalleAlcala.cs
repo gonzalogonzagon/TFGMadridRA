@@ -14,19 +14,17 @@ public class CalleAlcala : MonoBehaviour
 
     private void Start()
     {
-        // Asegurarse de que tenemos una referencia válida
         if (targetSprite == null)
         {
             Debug.LogError("No se ha asignado un SpriteRenderer en " + gameObject.name);
             return;
         }
 
-        // Inicialmente establecer como invisible
         SetTransparencyInvisible();
     }
 
     /// <summary>
-    /// Hace el sprite completamente invisible (alpha = 0)
+    /// Makes the sprite completely invisible (alpha = 0)
     /// </summary>
     public void SetTransparencyInvisible()
     {
@@ -34,7 +32,7 @@ public class CalleAlcala : MonoBehaviour
     }
 
     /// <summary>
-    /// Hace el sprite semi-transparente (alpha = 0.5)
+    /// Makes the sprite semi-transparent (alpha = 0.5)
     /// </summary>
     public void SetTransparencySemiVisible()
     {
@@ -42,7 +40,7 @@ public class CalleAlcala : MonoBehaviour
     }
 
     /// <summary>
-    /// Hace el sprite completamente visible (alpha = 1)
+    /// Makes the sprite completely visible (alpha = 1)
     /// </summary>
     public void SetTransparencyFullyVisible()
     {
@@ -50,7 +48,7 @@ public class CalleAlcala : MonoBehaviour
     }
 
     /// <summary>
-    /// Establece el valor Alpha del sprite
+    /// Sets the Alpha value of the sprite
     /// </summary>
     private void SetSpriteAlpha(float alpha)
     {

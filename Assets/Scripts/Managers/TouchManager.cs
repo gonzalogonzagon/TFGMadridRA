@@ -15,32 +15,58 @@ public class TouchManager : MonoBehaviour
 
     private Vector2 initialTouchPosition;
     private float touchStartTime;
+    private float timeThreshold = 0.2f;
 
     [SerializeField]
     private float raycastDistance = 100f; // Maximum distance for raycasting to detect interactable objects
     [SerializeField]
     private LayerMask mask; // Layer mask for raycasting
 
-    [SerializeField]
-    private float dragThreshold = 0.2f; // Threshold to distinguish between tap and drag
-
     // Lifecycle methods ------------------------------------------------------------
     private void Awake()
     {   
-        if (EventSystem.current != null)
-            pointerEventData = new PointerEventData(EventSystem.current);
-        
-        playerInput = GetComponent<PlayerInput>();
-        if (playerInput == null) ////
-        {
-            Debug.LogError("PlayerInput component not found on " + gameObject.name);
-        } ////
+        if (!setUpCameraAndInput()) {
+            enabled = false;
+            return;
+        }
+    }
 
-        // Initialize input actions
-        touchPressAction = playerInput.actions["TouchPress"];
-        touchPositionAction = playerInput.actions["TouchPosition"];
+    private bool setUpCameraAndInput() {
+        bool isValid = true;
 
         mainCamera = Camera.main;
+        if (mainCamera == null) {
+            handleError($"[TouchManager] Main camera not found! " +
+                $"Ensure there is a camera in the scene tagged as 'MainCamera'.");
+            isValid = false;
+        }
+
+        playerInput = GetComponent<PlayerInput>();
+        if (playerInput == null) {
+            handleError($"[TouchManager] PlayerInput component not found on {gameObject.name}.");
+            isValid = false;
+        }
+
+        try {
+            touchPressAction = playerInput.actions["TouchPress"];
+            touchPositionAction = playerInput.actions["TouchPosition"];
+        } catch (KeyNotFoundException) {
+            handleError($"[TouchManager] Required input actions 'TouchPress' and/or 'TouchPosition' not found in PlayerInput actions.");
+            isValid = false;
+        }
+        
+        if (EventSystem.current == null) {
+            handleError($"[TouchManager] EventSystem not found in the scene. UI interactions will not be detected.");
+            isValid = false;
+        }
+        else
+            pointerEventData = new PointerEventData(EventSystem.current);
+
+        return isValid;
+    }
+
+    private void handleError(string message) {
+        Debug.LogError(message);
     }
 
     private void OnEnable()
@@ -65,7 +91,7 @@ public class TouchManager : MonoBehaviour
     private void OnTouchEnded(InputAction.CallbackContext context)
     {
         float touchDuration = Time.time - touchStartTime;
-        if (touchDuration < dragThreshold)
+        if (touchDuration < timeThreshold)
             HandleTouch(initialTouchPosition);
     }
 
@@ -90,11 +116,6 @@ public class TouchManager : MonoBehaviour
 
     private bool IsPointerOverUI(Vector2 touchPosition)
     {
-        if (EventSystem.current == null) {
-            Debug.LogWarning("EventSystem not found in the scene.");
-            return false;
-        }
-
         pointerEventData ??= new PointerEventData(EventSystem.current);
 
         pointerEventData.position = touchPosition;

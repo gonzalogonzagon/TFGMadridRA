@@ -6,9 +6,12 @@ public class SelectActiveObject : MonoBehaviour
     [Tooltip("Object list that can be activated/deactivated")]
     public List<GameObject> objectsToManage;
 
-    // Llama este método desde el botón, pasando el índice correspondiente
+    // Call this method from the button, passing the corresponding index
     public void ActivateObjectByIndex(int index)
     {
+        if (objectsToManage == null || index < 0 || index >= objectsToManage.Count)
+            return;
+
         for (int i = 0; i < objectsToManage.Count; i++)
         {
             if (objectsToManage[i] != null)

@@ -80,5 +80,3 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 64
-  dragThreshold: 0.2
-  infoPanel: {fileID: 0}

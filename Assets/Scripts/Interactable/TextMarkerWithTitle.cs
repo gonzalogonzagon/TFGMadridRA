@@ -33,7 +33,7 @@ public class TextMarkerWithTitle : MonoBehaviour, IInteractable
     public string InfoDescription
     {
         get => infoDescription;
-        set
+        private set
         {
             infoDescription = value;
             if (descriptionField != null)
@@ -44,7 +44,7 @@ public class TextMarkerWithTitle : MonoBehaviour, IInteractable
     public string InfoTitle
     {
         get => infoTitle;
-        set
+        private set
         {
             infoTitle = value;
             if (titleField != null)

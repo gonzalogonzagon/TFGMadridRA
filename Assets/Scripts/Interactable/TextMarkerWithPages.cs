@@ -22,7 +22,7 @@ public class TextMarkerWithPages : MonoBehaviour, IInteractable
     public string InfoDescription
     {
         get => infoDescription;
-        set => infoDescription = value;
+        private set => infoDescription = value;
     }
 
     public void ChangeContent(string newText)
