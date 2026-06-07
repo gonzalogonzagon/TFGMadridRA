@@ -12,7 +12,7 @@ public class Postcard : MonoBehaviour, IInteractable
         if (PostcardsManager.Instance.IsCollected(postcardKey))
         {
             SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-            spriteRenderer.sprite = PostcardsManager.Instance.GetPostcard(postcardKey)?.Postcard;
+            spriteRenderer.sprite = PostcardsManager.Instance.GetPostcard(postcardKey)?.Postcard.Picture;
         }
     }
     

@@ -5,37 +5,19 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
 
-[System.Serializable]
-public class PostcardItem
-{
-    [SerializeField] private string key;
-    [SerializeField] private string title;
-    [SerializeField] private Sprite postcard;
-    [SerializeField] private Sprite pastPicture;
-    [SerializeField] private Sprite presentPicture;
-
-    public string Key => key;
-    public string Title => title;
-    public Sprite Postcard => postcard;
-    public Sprite PastPicture => pastPicture;
-    public Sprite PresentPicture => presentPicture;
-}
-
 public class PostcardsManager : MonoBehaviour
 {
     [SerializeField] private List<PostcardItem> postcards;
     
     [SerializeField] private GameObject objectToMove;
 
-    [SerializeField] private Sprite defaultImage;
-    [SerializeField] private string infoTitlePicture;
-    [SerializeField] private Image postcardImageRenderer;
-    [SerializeField] private Image pastPictureRenderer;
-    [SerializeField] private Image presentPictureRenderer;
+    [SerializeField] private PostcardUIDisplay uiDisplay;
 
     [SerializeField] private Canvas postcardWarningCanvas;
     [SerializeField] private Image warningImageDisplay;
     [SerializeField] private TMP_Text warningTitleText;
+
+    private PostcardItem currentPostcard;
     
     public static PostcardsManager Instance { get; private set; }
     
@@ -58,12 +40,9 @@ public class PostcardsManager : MonoBehaviour
             return;
         }
 
-        PostcardItem postcard = GetPostcard(key);
-
-        presentPictureRenderer.sprite = postcard != null && postcard.PresentPicture != null ? postcard.PresentPicture : defaultImage;
-        pastPictureRenderer.sprite = postcard != null && postcard.PastPicture != null ? postcard.PastPicture : defaultImage;
-        postcardImageRenderer.sprite = postcard != null && postcard.Postcard != null ? postcard.Postcard : defaultImage;
-
+        currentPostcard = GetPostcard(key);
+        uiDisplay.DisplayPostcard(currentPostcard);
+        
         if (objectToMove != null)
         {
             objectToMove.SetActive(true);
@@ -71,13 +50,14 @@ public class PostcardsManager : MonoBehaviour
         }
 
         StartCoroutine(AppearAnimation(objectToMove));
-
     }
 
     public bool IsCollected(string key) => PlayerPrefs.HasKey(key);
 
     public PostcardItem GetPostcard(string key) 
         => postcards.Find(p => p.Key == key);
+
+    public PostcardItem GetCurrentPostcard() => currentPostcard;
 
     public List<PostcardItem> GetAllPostcards() => postcards;
 
@@ -102,23 +82,23 @@ public class PostcardsManager : MonoBehaviour
 
     public void ShowPostcardWarning(string key)
     {
-        PostcardItem postcard = GetPostcard(key);
+        currentPostcard = GetPostcard(key);
 
-        if (postcard == null)
+        if (currentPostcard == null)
         {
             Debug.LogWarning($"Postcard with key '{key}' not found");
             return;
         }
 
-        if (warningImageDisplay != null && postcard.PresentPicture != null)
+        if (warningImageDisplay != null && currentPostcard.PresentPicture != null)
         {
-            warningImageDisplay.sprite = postcard.PresentPicture;
+            warningImageDisplay.sprite = currentPostcard.PresentPicture.Picture;
             warningImageDisplay.preserveAspect = true;
         }
 
         if (warningTitleText != null)
         {
-            warningTitleText.text = postcard.Title;
+            warningTitleText.text = currentPostcard.Postcard.Title ?? "Postcard no disponible";
         }
 
         postcardWarningCanvas?.gameObject.SetActive(true);

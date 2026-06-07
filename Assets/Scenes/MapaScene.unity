@@ -859,7 +859,7 @@ GameObject:
   - component: {fileID: 256538131}
   - component: {fileID: 256538134}
   - component: {fileID: 256538133}
-  - component: {fileID: 256538132}
+  - component: {fileID: 256538135}
   m_Layer: 6
   m_Name: TextMPostcard
   m_TagString: Untagged
@@ -886,21 +886,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.05, y: -0.0093999505}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &256538132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256538130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9f600eb0f6cc1348aba35a9a824e0bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetObject: {fileID: 0}
-  hideObjectOnInteract: 1
-  playAppearAnimation: 1
 --- !u!65 &256538133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -974,6 +959,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &256538135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256538130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f341ab594fdb584b883c4bf68494726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasToShow: {fileID: 1079910449}
+  titleField: {fileID: 1079910446}
+  descriptionField: {fileID: 1079910445}
+  dataType: 1
 --- !u!1 &259965111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,6 +1503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 668652990}
   - component: {fileID: 668652991}
+  - component: {fileID: 668652992}
   m_Layer: 0
   m_Name: PostcardsManager
   m_TagString: Untagged
@@ -1538,39 +1540,126 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   postcards:
   - key: Plaza
-    title: p
-    postcard: {fileID: 21300000, guid: a6d476db74b067048b85ed7e2df00d75, type: 3}
-    pastPicture: {fileID: 21300000, guid: 6bc39a182dd256641bf60c2451dd74ae, type: 3}
-    presentPicture: {fileID: 21300000, guid: c1afa73c0e036844496ff913036883fd, type: 3}
+    postcard:
+      title: Plaza Mayor
+      description: dfdfdf
+      dataTitle: 
+      dataDescription: 
+      picture: {fileID: 21300000, guid: a6d476db74b067048b85ed7e2df00d75, type: 3}
+    pastPicture:
+      title: Plaza Mayor en el siglo XVII
+      description: Dfefe gdgsdfujgg gfg dg dffg
+      dataTitle: 
+      dataDescription: 
+      picture: {fileID: 21300000, guid: 6bc39a182dd256641bf60c2451dd74ae, type: 3}
+    presentPicture:
+      title: Plaza Mayor en la actualidad
+      description: Dfefe gdgsdfujgg gfg dg dffg
+      dataTitle: 
+      dataDescription: 
+      picture: {fileID: 21300000, guid: c1afa73c0e036844496ff913036883fd, type: 3}
   - key: Sol
-    title: s
-    postcard: {fileID: 21300000, guid: 81378a35021d51c4eb1320ad922552b6, type: 3}
-    pastPicture: {fileID: 21300000, guid: e865dcb1caa2b9c42a1f0315e799142d, type: 3}
-    presentPicture: {fileID: 21300000, guid: 066a47d9adf515149a732f9e76410ef2, type: 3}
+    postcard:
+      title: Puerta del Sol
+      description: dfdfd
+      dataTitle: 
+      dataDescription: 
+      picture: {fileID: 21300000, guid: 81378a35021d51c4eb1320ad922552b6, type: 3}
+    pastPicture:
+      title: dddddd dddd
+      description: bbbbbbbbb
+      dataTitle: 
+      dataDescription: 
+      picture: {fileID: 21300000, guid: e865dcb1caa2b9c42a1f0315e799142d, type: 3}
+    presentPicture:
+      title: ssss sssss s
+      description: fdfdfdfd
+      dataTitle: 
+      dataDescription: 
+      picture: {fileID: 21300000, guid: 066a47d9adf515149a732f9e76410ef2, type: 3}
   - key: Atocha
-    title: "Estaci\xF3n Puerta de Atocha"
-    postcard: {fileID: 21300000, guid: 48f4f060094346342aa0e557b189202e, type: 3}
-    pastPicture: {fileID: 21300000, guid: 07c089167debc1748b0ee027f2407da5, type: 3}
-    presentPicture: {fileID: 21300000, guid: 297ce151bc1c5a84ca4afbd2a721e671, type: 3}
+    postcard:
+      title: 
+      description: 
+      dataTitle: 
+      dataDescription: 
+      picture: {fileID: 0}
+    pastPicture:
+      title: 
+      description: 
+      dataTitle: 
+      dataDescription: 
+      picture: {fileID: 0}
+    presentPicture:
+      title: 
+      description: 
+      dataTitle: 
+      dataDescription: 
+      picture: {fileID: 0}
   - key: Palacio
-    title: Palacio Real
-    postcard: {fileID: 21300000, guid: 2c38bd1012dceb94a9ea329d9a87e90f, type: 3}
-    pastPicture: {fileID: 21300000, guid: e456040c791b2d842812f75a6f197f81, type: 3}
-    presentPicture: {fileID: 21300000, guid: 7c7e6c8a53cf64b4aa55a92fe3043ea0, type: 3}
+    postcard:
+      title: 
+      description: 
+      dataTitle: 
+      dataDescription: 
+      picture: {fileID: 0}
+    pastPicture:
+      title: 
+      description: 
+      dataTitle: 
+      dataDescription: 
+      picture: {fileID: 0}
+    presentPicture:
+      title: 
+      description: 
+      dataTitle: 
+      dataDescription: 
+      picture: {fileID: 0}
   - key: Alcala
-    title: "Puerta de Alcal\xE1"
-    postcard: {fileID: 21300000, guid: ec47296f27a83134f9ebef250f474eba, type: 3}
-    pastPicture: {fileID: 21300000, guid: e456040c791b2d842812f75a6f197f81, type: 3}
-    presentPicture: {fileID: 21300000, guid: 7c7e6c8a53cf64b4aa55a92fe3043ea0, type: 3}
+    postcard:
+      title: 
+      description: 
+      dataTitle: 
+      dataDescription: 
+      picture: {fileID: 21300000, guid: ec47296f27a83134f9ebef250f474eba, type: 3}
+    pastPicture:
+      title: 
+      description: 
+      dataTitle: 
+      dataDescription: 
+      picture: {fileID: 0}
+    presentPicture:
+      title: 
+      description: 
+      dataTitle: 
+      dataDescription: 
+      picture: {fileID: 0}
   objectToMove: {fileID: 512115430}
-  defaultImage: {fileID: 21300000, guid: 7d4868c98a7fb5749b5fb24a93f7e9fd, type: 3}
-  infoTitlePicture: 
-  postcardImageRenderer: {fileID: 1667238204}
-  pastPictureRenderer: {fileID: 312592724}
-  presentPictureRenderer: {fileID: 937275002}
+  uiDisplay: {fileID: 668652992}
   postcardWarningCanvas: {fileID: 2505022986869765206}
   warningImageDisplay: {fileID: 1424855871846030197}
   warningTitleText: {fileID: 2505022986869765207}
+--- !u!114 &668652992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668652989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be66fb8d4527d0f4ba42e9a885e86a13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  postcardImageRenderer: {fileID: 1667238204}
+  presentPictureRenderer: {fileID: 937275002}
+  pastPictureRenderer: {fileID: 312592724}
+  pastPictureTitleText: {fileID: 163475227}
+  pastPictureDescriptionText: {fileID: 1206145338}
+  presentPictureTitleText: {fileID: 82534931}
+  presentPictureDescriptionText: {fileID: 1950833281}
+  defaultImage: {fileID: 21300000, guid: 7d4868c98a7fb5749b5fb24a93f7e9fd, type: 3}
+  defaultTitle: Postal
 --- !u!1 &687342896
 GameObject:
   m_ObjectHideFlags: 0
@@ -3401,7 +3490,7 @@ GameObject:
   - component: {fileID: 1244135343}
   - component: {fileID: 1244135346}
   - component: {fileID: 1244135345}
-  - component: {fileID: 1244135344}
+  - component: {fileID: 1244135347}
   m_Layer: 6
   m_Name: DataMPast
   m_TagString: Untagged
@@ -3428,21 +3517,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 1, y: 1}
---- !u!114 &1244135344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1244135342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9f600eb0f6cc1348aba35a9a824e0bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetObject: {fileID: 0}
-  hideObjectOnInteract: 1
-  playAppearAnimation: 1
 --- !u!65 &1244135345
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3516,6 +3590,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1244135347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244135342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f341ab594fdb584b883c4bf68494726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasToShow: {fileID: 1079910449}
+  titleField: {fileID: 1079910446}
+  descriptionField: {fileID: 1079910445}
+  dataType: 0
 --- !u!1 &1265604768
 GameObject:
   m_ObjectHideFlags: 0
@@ -3909,7 +3999,7 @@ GameObject:
   - component: {fileID: 1394935212}
   - component: {fileID: 1394935215}
   - component: {fileID: 1394935214}
-  - component: {fileID: 1394935213}
+  - component: {fileID: 1394935216}
   m_Layer: 6
   m_Name: DataMPresent
   m_TagString: Untagged
@@ -3936,21 +4026,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &1394935213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1394935211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9f600eb0f6cc1348aba35a9a824e0bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetObject: {fileID: 0}
-  hideObjectOnInteract: 1
-  playAppearAnimation: 1
 --- !u!65 &1394935214
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4024,6 +4099,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1394935216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394935211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f341ab594fdb584b883c4bf68494726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasToShow: {fileID: 1079910449}
+  titleField: {fileID: 1079910446}
+  descriptionField: {fileID: 1079910445}
+  dataType: 2
 --- !u!1001 &1420748051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4598,7 +4689,7 @@ GameObject:
   - component: {fileID: 1515036824}
   - component: {fileID: 1515036827}
   - component: {fileID: 1515036826}
-  - component: {fileID: 1515036825}
+  - component: {fileID: 1515036828}
   m_Layer: 6
   m_Name: DataMPoscard
   m_TagString: Untagged
@@ -4625,21 +4716,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.05, y: -0.0093999505}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1515036825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515036823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9f600eb0f6cc1348aba35a9a824e0bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetObject: {fileID: 0}
-  hideObjectOnInteract: 1
-  playAppearAnimation: 1
 --- !u!65 &1515036826
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4713,6 +4789,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1515036828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515036823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f341ab594fdb584b883c4bf68494726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasToShow: {fileID: 1079910449}
+  titleField: {fileID: 1079910446}
+  descriptionField: {fileID: 1079910445}
+  dataType: 1
 --- !u!1 &1533874809
 GameObject:
   m_ObjectHideFlags: 0

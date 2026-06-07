@@ -20,12 +20,12 @@ public class TextMarkerWithTitle : MonoBehaviour, IInteractable
         if (titleField != null)
             titleField.text = infoTitle;
         else
-            Debug.LogWarning("No se ha asignado el campo de título a InfoMarker1.");
+            Debug.LogWarning("No title field assigned to TextMarkerWithTitle.");
 
         if (descriptionField != null)
             descriptionField.text = infoDescription;
         else
-            Debug.LogWarning("No se ha asignado el campo de descripción a InfoMarker1.");
+            Debug.LogWarning("No description field assigned to TextMarkerWithTitle.");
     }
 
     public bool CanInteract() => enabled && gameObject.activeInHierarchy;
