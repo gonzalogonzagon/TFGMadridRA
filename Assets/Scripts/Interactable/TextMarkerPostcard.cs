@@ -8,6 +8,7 @@ public class TextMarkerPostcard : MonoBehaviour, IInteractable
     [SerializeField] private TMP_Text descriptionField;
     
     [SerializeField] private PostcardDataEnum dataType = PostcardDataEnum.PresentData;
+    [SerializeField] private bool useDataFields = true;
     
     public void Interact()
     {
@@ -19,25 +20,27 @@ public class TextMarkerPostcard : MonoBehaviour, IInteractable
             Debug.LogWarning("No postcard is currently selected");
             return;
         }
-
-        if (dataType == PostcardDataEnum.PresentData)
-        {
-            titleField.text = currentPostcard.PresentPicture.DataTitle;
-            descriptionField.text = currentPostcard.PresentPicture.DataDescription;
-        }
-        else if (dataType == PostcardDataEnum.PastData)
-        {            
-            titleField.text = currentPostcard.PastPicture.DataTitle;
-            descriptionField.text = currentPostcard.PastPicture.DataDescription;
-        }
-        else if (dataType == PostcardDataEnum.PostcardData)
-        {
-            titleField.text = currentPostcard.Postcard.DataTitle;
-            descriptionField.text = currentPostcard.Postcard.DataDescription;
-        }
         
+        var pictureInfo = GetCurrentPostcardData(currentPostcard);
+        if (pictureInfo == null)        {
+            Debug.LogWarning($"No data found for {dataType} in postcard {currentPostcard.Key}");
+            return;
+        }
+        titleField.text = useDataFields ? pictureInfo.DataTitle : pictureInfo.Title;
+        descriptionField.text = useDataFields ? pictureInfo.DataDescription : pictureInfo.Description;
         canvasToShow?.gameObject.SetActive(true);
     }
 
     public bool CanInteract() => enabled && gameObject.activeInHierarchy;
+
+    private PictureInfo GetCurrentPostcardData(PostcardItem currentPostcard)
+    {
+        return dataType switch
+        {
+            PostcardDataEnum.PresentData => currentPostcard.PresentPicture,
+            PostcardDataEnum.PastData => currentPostcard.PastPicture,
+            PostcardDataEnum.PostcardData => currentPostcard.Postcard,
+            _ => null
+        };
+    }
 }

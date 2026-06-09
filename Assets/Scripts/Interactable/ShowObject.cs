@@ -6,13 +6,12 @@ using System.Collections;
 public class ShowObject : MonoBehaviour, IInteractable
 {
     [SerializeField] private GameObject targetObject;
-    [SerializeField] private bool hideObjectOnInteract = true;
-    [SerializeField] private bool playAppearAnimation = true;
+    [SerializeField] private ShowInteractionEnum showBehavior = ShowInteractionEnum.ShowWithAnimationAndHide;
+    [SerializeField] private float appearDuration = 0.3f;
 
     public void Interact()
     {
         if (!CanInteract()) return;
-        
         if (targetObject == null)
         {
             Debug.LogWarning("Target object is not assigned in ShowObject on " + gameObject.name);
@@ -21,44 +20,38 @@ public class ShowObject : MonoBehaviour, IInteractable
 
         targetObject.SetActive(true);
 
-        if (playAppearAnimation)
-            StartCoroutine(AppearAnimation(targetObject));
-
-        if (hideObjectOnInteract)
-            HideSelf();
+        switch (showBehavior)
+        {
+            case ShowInteractionEnum.ShowOnly:
+                break;
+            case ShowInteractionEnum.ShowWithAnimation:
+                StartCoroutine(AppearAnimation(targetObject));
+                break;
+            case ShowInteractionEnum.ShowWithAnimationAndHide:
+                StartCoroutine(AppearAnimationThenHide(targetObject));
+                break;
+            case ShowInteractionEnum.HideThis:
+                gameObject.SetActive(false);
+                break;
+        }
     }
 
     // Interaction is only possible if the component is enabled and the GameObject is active in the hierarchy
     public bool CanInteract() => enabled && gameObject.activeInHierarchy;
 
-    private void HideSelf()
+    private IEnumerator AppearAnimationThenHide(GameObject obj)
     {
-        //Check if this GameObject has a Canvas component (covers UI panels, etc.)
-        if (GetComponent<Canvas>() != null)
-        {
-            gameObject.SetActive(false);
-            Debug.Log("Hiding Canvas " + gameObject.name); ////
-            return;
-        }
-
-        // Check if it has a Graphic component (covers most UI elements)
-        if (GetComponent<Graphic>() != null)
-        {
-            gameObject.SetActive(false);
-            Debug.Log("Hiding UI element " + gameObject.name); ////
-            return;
-        }
-
-        // Case 3: 3D object - disable Renderer and Collider instead of deactivating the GameObject
         Renderer rend = GetComponent<Renderer>();
         if (rend != null)
             rend.enabled = false;
 
-        Collider col = GetComponent<Collider>();
-        if (col != null)
-            col.enabled = false;
+        Image img = GetComponent<Image>();
+        if (img != null)
+            img.enabled = false;
 
-        Debug.Log("Hiding 3D object " + gameObject.name); ////
+        yield return StartCoroutine(AppearAnimation(obj));
+
+        gameObject.SetActive(false);
     }
     
     private IEnumerator AppearAnimation(GameObject obj)
@@ -66,7 +59,6 @@ public class ShowObject : MonoBehaviour, IInteractable
         Vector3 originalScale = obj.transform.localScale;
         obj.transform.localScale = Vector3.zero;
 
-        float appearDuration = 0.3f;
         float time = 0f;
 
         while (time < appearDuration)

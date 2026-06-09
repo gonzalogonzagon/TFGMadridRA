@@ -27,11 +27,8 @@ public class CollectablesManager : MonoBehaviour
     
     public bool TryCollect(string key)
     {
-        if (PlayerPrefs.HasKey(key))
+        if (!SaveLoadManager.Instance.TryCollect(key))
             return false;
-        
-        PlayerPrefs.SetInt(key, 1);
-        PlayerPrefs.Save();
         
         var item = GetCollectable(key);
         if (item != null && rewardImageDisplay != null)
@@ -46,7 +43,7 @@ public class CollectablesManager : MonoBehaviour
         return true;
     }
     
-    public bool IsCollected(string key) => PlayerPrefs.HasKey(key);
+    public bool IsCollected(string key) => SaveLoadManager.Instance.IsCollected(key);
     
     public CollectableItem GetCollectable(string key) 
         => collectables.Find(c => c.Key == key);

@@ -2931,7 +2931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 816299380}
   hideObjectOnInteract: 1
-  playAppearAnimation: 0
+  playAppearAnimation: 1
 --- !u!114 &1158224493
 MonoBehaviour:
   m_ObjectHideFlags: 0

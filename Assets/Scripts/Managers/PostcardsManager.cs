@@ -52,7 +52,7 @@ public class PostcardsManager : MonoBehaviour
         StartCoroutine(AppearAnimation(objectToMove));
     }
 
-    public bool IsCollected(string key) => PlayerPrefs.HasKey(key);
+    public bool IsCollected(string key) => SaveLoadManager.Instance.IsCollected(key);
 
     public PostcardItem GetPostcard(string key) 
         => postcards.Find(p => p.Key == key);

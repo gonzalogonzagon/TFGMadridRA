@@ -25,10 +25,11 @@ public class GetCollectable : MonoBehaviour, IInteractable
     {
         if (!CanInteract()) return;
 
-        CollectablesManager.Instance.TryCollect(key);
+        CollectablesManager.Instance?.TryCollect(key);
     }
     
-    public bool CanInteract() => !CollectablesManager.Instance.IsCollected(key);
+    public bool CanInteract() => 
+        CollectablesManager.Instance != null && !CollectablesManager.Instance.IsCollected(key);
 
     private void HandleCollectableCollected(string collectedKey)
     {
@@ -38,7 +39,7 @@ public class GetCollectable : MonoBehaviour, IInteractable
     
     private void UpdateVisuals()
     {
-        if (CollectablesManager.Instance.IsCollected(key))
+        if (CollectablesManager.Instance?.IsCollected(key) == true)
             spriteRenderer.sprite = imageAsset;
     }
 }
