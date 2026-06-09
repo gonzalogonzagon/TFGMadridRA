@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/RClaraScene.unity
     guid: 9985bed4a70a1d04da481602fc911556
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/RCabinaScene.unity
     guid: a2bdf52a7f44c3a49ab1f2be5b6d31a9
   - enabled: 0
@@ -29,7 +29,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ClaraScene.unity
     guid: 7f5ab6b1625121c4c8a578ff5c1f1503
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MapaScene.unity
     guid: a34fa42e81daef246b576975053bd0d9
   m_configObjects:

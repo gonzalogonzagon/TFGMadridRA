@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum ShowInteractionEnum
-    {
-        ShowOnly,                    
-        ShowWithAnimation,           
-        ShowWithAnimationAndHide,    
-        HideThis                    
-    }
+{
+    ShowOnly,                    
+    ShowWithAnimation,           
+    ShowWithAnimationAndHide,    
+    HideThis                    
+}

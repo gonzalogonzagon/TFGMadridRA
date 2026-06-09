@@ -58,32 +58,59 @@ public class RTouchManager : MonoBehaviour
 
     [SerializeField] private GameObject infoPanel; // Hides info panel when no interactable is touched
 
-    // Lifecycle methods ------------------------------------------------------------
-    private void Awake()
-    {   
-        if (EventSystem.current != null)
-            pointerEventData = new PointerEventData(EventSystem.current);
-        
+    // Initialization methods ------------------------------------------------------------
+    private bool SetUpCameraAndInput() {
+        bool isValid = true;
+
+        mainCamera = Camera.main;
+        if (mainCamera == null) {
+            HandleError($"[TouchManager] Main camera not found! " +
+                $"Ensure there is a camera in the scene tagged as 'MainCamera'.");
+            isValid = false;
+        }
+        cameraTransform = mainCamera?.transform;
+        targetRotation = cameraTransform.rotation;
+        targetFOV = mainCamera.fieldOfView;
+
         playerInput = GetComponent<PlayerInput>();
-        if (playerInput == null) ////
-        {
-            Debug.LogError("PlayerInput component not found on " + gameObject.name);
-        } ////
+        if (playerInput == null) {
+            HandleError($"[TouchManager] PlayerInput component not found on {gameObject.name}.");
+            isValid = false;
+        }
 
         if (!EnhancedTouchSupport.enabled)
             EnhancedTouchSupport.Enable();
 
-        // Initialize input actions
-        touchPressAction = playerInput.actions["TouchPress"];
-        touchPositionAction = playerInput.actions["TouchPosition"];
-        pinchAction = playerInput.actions["TouchPinch"];
+        try {
+            touchPressAction = playerInput.actions["TouchPress"];
+            touchPositionAction = playerInput.actions["TouchPosition"];
+            pinchAction = playerInput.actions["TouchPinch"];
+        } catch (KeyNotFoundException) {
+            HandleError($"[TouchManager] Required input actions 'TouchPress', 'TouchPosition', and/or 'TouchPinch' not found in PlayerInput actions.");
+            isValid = false;
+        }
+        
+        if (EventSystem.current == null) {
+            HandleError($"[TouchManager] EventSystem not found in the scene. UI interactions will not be detected.");
+            isValid = false;
+        }
+        else
+            pointerEventData = new PointerEventData(EventSystem.current);
 
-        mainCamera = Camera.main;
+        return isValid;
+    }
 
-        cameraTransform = mainCamera?.transform;
-        targetRotation = cameraTransform.rotation;
+    private void HandleError(string message) {
+        Debug.LogError(message);
+    }
 
-        targetFOV = mainCamera.fieldOfView;
+    // Lifecycle methods ------------------------------------------------------------
+    private void Awake()
+    {   
+        if (!SetUpCameraAndInput()) {
+            enabled = false;
+            return;
+        }
     }
 
     private void Start()

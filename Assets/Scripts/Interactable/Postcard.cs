@@ -16,13 +16,6 @@ public class Postcard : MonoBehaviour, IInteractable
         }
     }
     
-    public void Interact()
-    {
-        PostcardsManager.Instance.ShowPostcard(postcardKey, transform.position);
-    }
-
-    public bool CanInteract()
-    {
-        return true;
-    }
+    public void Interact() => PostcardsManager.Instance.ShowPostcard(postcardKey, transform.position);
+    public bool CanInteract() => enabled && gameObject.activeInHierarchy;
 }

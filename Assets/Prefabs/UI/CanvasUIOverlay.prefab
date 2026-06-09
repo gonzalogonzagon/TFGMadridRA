@@ -396,8 +396,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 0}
-  hideObjectOnInteract: 0
-  playAppearAnimation: 0
+  showBehavior: 0
+  appearDuration: 0.3
 --- !u!1 &6909310375081657609
 GameObject:
   m_ObjectHideFlags: 0

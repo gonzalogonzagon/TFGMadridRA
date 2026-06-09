@@ -22,28 +22,20 @@ public class TouchManager : MonoBehaviour
     [SerializeField]
     private LayerMask mask; // Layer mask for raycasting
 
-    // Lifecycle methods ------------------------------------------------------------
-    private void Awake()
-    {   
-        if (!setUpCameraAndInput()) {
-            enabled = false;
-            return;
-        }
-    }
-
-    private bool setUpCameraAndInput() {
+    // Initialization methods ------------------------------------------------------------
+    private bool SetUpCameraAndInput() {
         bool isValid = true;
 
         mainCamera = Camera.main;
         if (mainCamera == null) {
-            handleError($"[TouchManager] Main camera not found! " +
+            HandleError($"[TouchManager] Main camera not found! " +
                 $"Ensure there is a camera in the scene tagged as 'MainCamera'.");
             isValid = false;
         }
 
         playerInput = GetComponent<PlayerInput>();
         if (playerInput == null) {
-            handleError($"[TouchManager] PlayerInput component not found on {gameObject.name}.");
+            HandleError($"[TouchManager] PlayerInput component not found on {gameObject.name}.");
             isValid = false;
         }
 
@@ -51,12 +43,12 @@ public class TouchManager : MonoBehaviour
             touchPressAction = playerInput.actions["TouchPress"];
             touchPositionAction = playerInput.actions["TouchPosition"];
         } catch (KeyNotFoundException) {
-            handleError($"[TouchManager] Required input actions 'TouchPress' and/or 'TouchPosition' not found in PlayerInput actions.");
+            HandleError($"[TouchManager] Required input actions 'TouchPress' and/or 'TouchPosition' not found in PlayerInput actions.");
             isValid = false;
         }
         
         if (EventSystem.current == null) {
-            handleError($"[TouchManager] EventSystem not found in the scene. UI interactions will not be detected.");
+            HandleError($"[TouchManager] EventSystem not found in the scene. UI interactions will not be detected.");
             isValid = false;
         }
         else
@@ -65,8 +57,17 @@ public class TouchManager : MonoBehaviour
         return isValid;
     }
 
-    private void handleError(string message) {
+    private void HandleError(string message) {
         Debug.LogError(message);
+    }
+
+    // Lifecycle methods ------------------------------------------------------------
+    private void Awake()
+    {   
+        if (!SetUpCameraAndInput()) {
+            enabled = false;
+            return;
+        }
     }
 
     private void OnEnable()
