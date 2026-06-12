@@ -1376,6 +1376,7 @@ Transform:
   - {fileID: 162156008}
   - {fileID: 1700310899}
   - {fileID: 1015718538}
+  - {fileID: 1200288675}
   - {fileID: 1053694683}
   - {fileID: 700259243}
   - {fileID: 1596565881}
@@ -1504,6 +1505,141 @@ MonoBehaviour:
     pesetas, muchas familias pudieron acceder por primera vez a un veh\xEDculo propio,
     lo que transform\xF3 la movilidad y la vida cotidiana: vacaciones en la costa,
     visitas a los pueblos, nuevos horizontes de libertad."
+--- !u!1001 &610153272
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1596565881}
+    m_Modifications:
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.035
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0008142485
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00008204611
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.99496144
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.1002553
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -11.508
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180.094
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3725898365101834666, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 33afe8f0ee0bc4f4db9f584db8a04759,
+        type: 3}
+    - target: {fileID: 3725898365101834666, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3725898365101834666, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 566d7716906376649b343d24ba8765ee, type: 2}
+    - target: {fileID: 5047809646738815492, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_Name
+      value: InfoMBibliocabinasData
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5047809646738815492, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 610153275}
+  m_SourcePrefab: {fileID: 100100000, guid: 92bc0ca5b1826a8429fa92a965961f03, type: 3}
+--- !u!4 &610153273 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+    type: 3}
+  m_PrefabInstance: {fileID: 610153272}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &610153274 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5047809646738815492, guid: 92bc0ca5b1826a8429fa92a965961f03,
+    type: 3}
+  m_PrefabInstance: {fileID: 610153272}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &610153275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610153274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1e88d11df6f344292b3ea40744084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasToShow: {fileID: 1875621443}
+  titleField: {fileID: 1875621442}
+  descriptionField: {fileID: 1875621441}
+  infoTitle: "60 a\xF1os de cabinas telef\xF3nicas espa\xF1olas"
+  infoDescription: "Fotograf\xEDas extra\xEDdas del documento \"Breve recorrido,
+    por m\xE1s  de 60 a\xF1os de Historia, de las Cabinas Telef\xF3nicas Espa\xF1olas\"(Enrique
+    Magdaleno Gonz\xE1lez. 2024. Historias de la telefon\xEDa y las telecomunicaciones
+    en Espa\xF1a)"
 --- !u!1 &639274400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,8 +1841,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 1596565880}
-  hideObjectOnInteract: 1
-  playAppearAnimation: 1
+  showBehavior: 2
+  appearDuration: 0.3
 --- !u!4 &700259243 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
@@ -2791,6 +2927,141 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1001 &1200288670
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 535750023}
+    m_Modifications:
+    - target: {fileID: 1277342754371820462, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_Name
+      value: InfoMAudioData
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062145424275578557, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: flipFace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062145424275578557, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: useWorldUp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.921
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.36299992
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9832549
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.18223555
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450178353665569688, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 33afe8f0ee0bc4f4db9f584db8a04759,
+        type: 3}
+    m_RemovedComponents:
+    - {fileID: 3062145424275578557, guid: 3c35d12974544d54c951658b9b7cceb2, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1277342754371820462, guid: 3c35d12974544d54c951658b9b7cceb2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1200288672}
+  m_SourcePrefab: {fileID: 100100000, guid: 3c35d12974544d54c951658b9b7cceb2, type: 3}
+--- !u!1 &1200288671 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1277342754371820462, guid: 3c35d12974544d54c951658b9b7cceb2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1200288670}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1200288672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200288671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1e88d11df6f344292b3ea40744084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasToShow: {fileID: 1875621443}
+  titleField: {fileID: 1875621442}
+  descriptionField: {fileID: 1875621441}
+  infoTitle: "\xBFEs el enemigo?"
+  infoDescription: "Fragmento de un mon\xF3logo de Miguel Gila Cuesta, humorista,
+    actor y dibujante de historietas espa\xF1ol. (Miguel Gila. 1979. \xBFEs el enemigo?
+    - Audio mon\xF3logo)"
+--- !u!4 &1200288675 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1200288670}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1217099555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2909,11 +3180,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasToShow: {fileID: 360681924}
   descriptionField: {fileID: 360681923}
-  infoDescription: "Durante los a\xF1os 60, Marisol \u2014nombre art\xEDstico de
-    Josefa Flores\u2014 se convirti\xF3 en el gran icono juvenil del franquismo.
-    Desde ni\xF1a protagoniz\xF3 pel\xEDculas, discos y revistas como Mundo Juvenil,
-    que alimentaban un modelo de juventud idealizada, inocente y sonriente, en l\xEDnea
-    con los valores del r\xE9gimen."
+  infoDescription: "Durante los a\xF1os 60, Marisol (nombre art\xEDstico de Josefa
+    Flores) se convirti\xF3 en el gran icono juvenil del franquismo. Desde ni\xF1a
+    protagoniz\xF3 pel\xEDculas, discos y revistas como Mundo Juvenil, que alimentaban
+    un modelo de juventud idealizada, inocente y sonriente, en l\xEDnea con los valores
+    del r\xE9gimen."
 --- !u!1 &1228989582
 GameObject:
   m_ObjectHideFlags: 0
@@ -3115,6 +3386,7 @@ Transform:
   - {fileID: 145740150}
   - {fileID: 1228989583}
   - {fileID: 748163295}
+  - {fileID: 610153273}
   m_Father: {fileID: 535750023}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1664056260
@@ -3451,6 +3723,159 @@ Transform:
   m_Children: []
   m_Father: {fileID: 535750023}
   m_LocalEulerAnglesHint: {x: 0, y: -180.094, z: 0}
+--- !u!1001 &1875621440
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653591225438127420, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_Name
+      value: CanvasTitleText Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653591225438127420, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c8a9d4b1253a13643af666cd1f255f05, type: 3}
+--- !u!114 &1875621441 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 751415449142213167, guid: c8a9d4b1253a13643af666cd1f255f05,
+    type: 3}
+  m_PrefabInstance: {fileID: 1875621440}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1875621442 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1240234539714785130, guid: c8a9d4b1253a13643af666cd1f255f05,
+    type: 3}
+  m_PrefabInstance: {fileID: 1875621440}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!223 &1875621443 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 4148315364726300739, guid: c8a9d4b1253a13643af666cd1f255f05,
+    type: 3}
+  m_PrefabInstance: {fileID: 1875621440}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1887790196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3963,5 +4388,6 @@ SceneRoots:
   - {fileID: 1664056264}
   - {fileID: 394778779}
   - {fileID: 360681922}
+  - {fileID: 1875621440}
   - {fileID: 10539449}
   - {fileID: 805017995}

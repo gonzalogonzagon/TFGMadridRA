@@ -486,7 +486,6 @@ GameObject:
   - component: {fileID: 233029469}
   - component: {fileID: 233029465}
   - component: {fileID: 233029468}
-  - component: {fileID: 233029470}
   m_Layer: 6
   m_Name: TobogganFolleto
   m_TagString: Untagged
@@ -592,7 +591,7 @@ MonoBehaviour:
   imageDisplay: {fileID: 1547618195}
   imageAsset: {fileID: 21300000, guid: 1733c1ea679dd6a4d826d2ffd6b0da0e, type: 3}
   moreInfoButton: {fileID: 1802769387}
-  textMarkerScript: {fileID: 233029470}
+  textMarkerScript: {fileID: 1986545980}
 --- !u!65 &233029469
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -614,24 +613,141 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.78, y: 14.698746, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &233029470
+--- !u!1001 &255866689
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 707574144}
+    m_Modifications:
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.19999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.19999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.362
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.391
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.093
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7948786
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.60676855
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3725898365101834666, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 566d7716906376649b343d24ba8765ee, type: 2}
+    - target: {fileID: 5047809646738815492, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      propertyPath: m_Name
+      value: TextMPastPalacioCibeles
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5047809646738815492, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 255866691}
+    - targetCorrespondingSourceObject: {fileID: 5047809646738815492, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 255866693}
+  m_SourcePrefab: {fileID: 100100000, guid: 92bc0ca5b1826a8429fa92a965961f03, type: 3}
+--- !u!1 &255866690 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5047809646738815492, guid: 92bc0ca5b1826a8429fa92a965961f03,
+    type: 3}
+  m_PrefabInstance: {fileID: 255866689}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &255866691
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233029464}
+  m_GameObject: {fileID: 255866690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f1e88d11df6f344292b3ea40744084b, type: 3}
+  m_Script: {fileID: 11500000, guid: 9426aae0620c82b46b79010283755380, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasToShow: {fileID: 1704628961}
-  titleField: {fileID: 1704628960}
-  descriptionField: {fileID: 1704628959}
-  infoTitle: "El tobog\xE1n: Revista Nuevo Mundo"
-  infoDescription: "Noticia extra\xEDda del n\xFAmero del 2 de abril de 1908 de la
-    revista Nuevo Mundo. (1908. Noticias. Biblioteca Digital memoriademadrid)"
+  flipFace: 1
+  useWorldUp: 1
+--- !u!4 &255866692 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1354940315956549049, guid: 92bc0ca5b1826a8429fa92a965961f03,
+    type: 3}
+  m_PrefabInstance: {fileID: 255866689}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &255866693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255866690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 078bf30dfa3d40c4b839049e05ef4636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasToShow: {fileID: 1109949202}
+  descriptionField: {fileID: 1109949203}
+  infoDescription: "Antes de ser Ayuntamiento, este espacio junto al Paseo del Prado
+    alberg\xF3 jardines, circos, quioscos, merenderos... y un tobog\xE1n monumental
+    que marc\xF3 una \xE9poca m\xE1s l\xFAdica. Una estampa casi olvidada del viejo
+    Madrid."
 --- !u!1001 &384666785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -845,8 +961,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 1858915063}
-  hideObjectOnInteract: 1
-  playAppearAnimation: 1
+  showBehavior: 2
+  appearDuration: 0.3
 --- !u!1001 &614358007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -951,6 +1067,7 @@ Transform:
   m_Children:
   - {fileID: 222915902}
   - {fileID: 1503712716}
+  - {fileID: 255866692}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -74.712, z: 0}
 --- !u!212 &707574145
@@ -1078,6 +1195,24 @@ MonoBehaviour:
   infoDescription: "Inscripci\xF3n: Anverso Madrid Calle de Alcala. Reverso: Logo:
     \"Knacksted & Nather / Lichtdruck / Hamburg\". (1908. Tarjeta postal. Biblioteca
     Digital memoriademadrid)"
+--- !u!114 &823460041 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1608719807681952231, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2113163087}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ebf8a2c40c2f14690ab35fabb3ec38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!223 &823460044 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 2147876919383337475, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2113163087}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &837822842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1168,7 +1303,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5047809646738815492, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 837822845}
+      addedObject: {fileID: 837822848}
   m_SourcePrefab: {fileID: 100100000, guid: 92bc0ca5b1826a8429fa92a965961f03, type: 3}
 --- !u!4 &837822843 stripped
 Transform:
@@ -1182,7 +1317,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 837822842}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &837822845
+--- !u!114 &837822848
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1191,14 +1326,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 837822844}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f1e88d11df6f344292b3ea40744084b, type: 3}
+  m_Script: {fileID: 11500000, guid: cd713a1ee79d35a4a9c2080aded2cf04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasToShow: {fileID: 1704628961}
-  titleField: {fileID: 1704628960}
-  descriptionField: {fileID: 1704628959}
-  infoTitle: "Informaci\xF3n"
-  infoDescription: "Este es un punto de inter\xE9s."
+  infoDescription: "El t\xE9rmino tobog\xE1n parece proceder del ing\xE9s \"toboggan\",
+    palabra adoptada de pueblos ind\xEDgenas de Canad\xE1, que utilizaban trineos
+    para deslizarse por laderas nevadas. Aquella pr\xE1ctica llam\xF3 la atenci\xF3n
+    de los europeos y el nombre viaj\xF3 con ellos. En Espa\xF1a, sin embargo, el
+    t\xE9rmino dej\xF3 de referirse al trineo y pas\xF3 a nombrar la estructura por
+    la que la gente se lanzaba.\r\nMucho antes de llegar a Madrid, ya se hab\xEDa
+    instalado uno en Pamplona en 1907, considerado el primero del pa\xEDs. La popularidad
+    de esta nueva atracci\xF3n la transform\xF3 en un negocio que se expandi\xF3
+    por toda Espa\xF1a. Se puede deducir, por tanto, la procedencia de este tobog\xE1n
+    a partir de la patente visible en este documento."
+  canvasToShow: {fileID: 823460044}
+  modalTextPages: {fileID: 823460041}
+  paginationMode: 1
 --- !u!1 &847641075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,8 +1575,149 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 233029464}
-  hideObjectOnInteract: 1
-  playAppearAnimation: 1
+  showBehavior: 2
+  appearDuration: 0.3
+--- !u!1001 &1109949201
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2692481059066266852, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_Name
+      value: CanvasText Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692481059066266852, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7972622956842986194, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4cd35c312e496c74f9fe81afdfd4b5f6, type: 3}
+--- !u!223 &1109949202 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 6654274101648023963, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1109949201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1109949203 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3542772972204854681, guid: 4cd35c312e496c74f9fe81afdfd4b5f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1109949201}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1229333520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,8 +1932,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 707574143}
-  hideObjectOnInteract: 1
-  playAppearAnimation: 1
+  showBehavior: 2
+  appearDuration: 0.3
 --- !u!1 &1476290976
 GameObject:
   m_ObjectHideFlags: 0
@@ -2748,13 +3032,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3725898365101834666, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 33afe8f0ee0bc4f4db9f584db8a04759,
+        type: 3}
+    - target: {fileID: 3725898365101834666, guid: 92bc0ca5b1826a8429fa92a965961f03,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 566d7716906376649b343d24ba8765ee, type: 2}
     - target: {fileID: 5047809646738815492, guid: 92bc0ca5b1826a8429fa92a965961f03,
         type: 3}
       propertyPath: m_Name
-      value: TextTobogganFolleto
+      value: InfoMTobogganFolletoData
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2792,8 +3082,9 @@ MonoBehaviour:
   canvasToShow: {fileID: 1704628961}
   titleField: {fileID: 1704628960}
   descriptionField: {fileID: 1704628959}
-  infoTitle: "Informaci\xF3n"
-  infoDescription: "Este es un punto de inter\xE9s."
+  infoTitle: "El tobog\xE1n: Revista Nuevo Mundo"
+  infoDescription: "Noticia extra\xEDda del n\xFAmero del 2 de abril de 1908 de la
+    revista Nuevo Mundo. (1908. Noticias. Biblioteca Digital memoriademadrid)"
 --- !u!1 &2056188326
 GameObject:
   m_ObjectHideFlags: 0
@@ -2927,6 +3218,139 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056188326}
   m_CullTransparentMesh: 1
+--- !u!1001 &2113163087
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2147876919383337475, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400785002862305610, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263159294534193020, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_Name
+      value: CanvasTextPages Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263159294534193020, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020547547334111583, guid: 53ef234edb8f0a5458bdef6a137e89b3,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 53ef234edb8f0a5458bdef6a137e89b3, type: 3}
 --- !u!1 &2143863436
 GameObject:
   m_ObjectHideFlags: 0
@@ -3258,6 +3682,8 @@ SceneRoots:
   - {fileID: 233029467}
   - {fileID: 707574144}
   - {fileID: 1704628957}
+  - {fileID: 1109949201}
+  - {fileID: 2113163087}
   - {fileID: 1547618193}
   - {fileID: 271965378035908093}
   - {fileID: 1663036201}
