@@ -2306,6 +2306,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: textPages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: imagePages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: textPages.Array.data[0]
+      value: "Si el lugar se encuentra bloqueado o no es posible reconocer el objetivo,
+        como alternativa, el usuario puede acceder al listado de ubicaciones pulsando
+        en el bot\xF3n inferior para obtener la postal."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: textPages.Array.data[1]
+      value: "Los iconos (i) indican una acci\xF3n interactiva en la escena. P\xFAlsalos
+        para activar nuevos elementos o descubrir m\xE1s detalles."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: textPages.Array.data[2]
+      value: "Al pulsar un icono de bocadillo se abrir\xE1 un di\xE1logo. En la escena
+        tambi\xE9n pueden encontrarse otros iconos para activar audio, v\xEDdeo y
+        otros efectos."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: imagePages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: a51940278e0f47e4f83c4dbd1ee2c448,
+        type: 3}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: imagePages.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2ee4b74d791113f45a4a6fe35d8ac0e2,
+        type: 3}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: imagePages.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: b96bde5a43575ff44a1c4b4f33b2544c,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3061,15 +3109,15 @@ MonoBehaviour:
   collectables:
   - key: Alcala
     title: "Puerta de Alcal\xE1"
-    preview: {fileID: 21300000, guid: 066a47d9adf515149a732f9e76410ef2, type: 3}
+    preview: {fileID: 21300000, guid: bd72c5a5db258134a818b47fa651ccf9, type: 3}
     postcard: {fileID: 21300000, guid: ec47296f27a83134f9ebef250f474eba, type: 3}
   - key: Atocha
     title: Puerta de Atocha
-    preview: {fileID: 21300000, guid: a51940278e0f47e4f83c4dbd1ee2c448, type: 3}
+    preview: {fileID: 21300000, guid: ca2b0677fb6eb8041b5a7a30f121fae2, type: 3}
     postcard: {fileID: 21300000, guid: 48f4f060094346342aa0e557b189202e, type: 3}
   - key: Palacio
     title: Palacio Real
-    preview: {fileID: 21300000, guid: 04c6c1a3d85abd149b6dd55cb78ba2eb, type: 3}
+    preview: {fileID: 21300000, guid: 6a69940d8d43a6644a6ef1891c41f2a5, type: 3}
     postcard: {fileID: 21300000, guid: 2c38bd1012dceb94a9ea329d9a87e90f, type: 3}
   - key: Plaza
     title: Plaza Mayor

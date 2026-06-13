@@ -1091,19 +1091,38 @@ PrefabInstance:
     - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
         type: 3}
       propertyPath: textPages.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
         type: 3}
       propertyPath: imagePages.Array.size
-      value: 6
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: textPages.Array.data[0]
+      value: Toca la pantalla cuando aparezca el recuadro blanco una vez se reconozca
+        una superficie para activar el contenido.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: textPages.Array.data[1]
+      value: Los iconos inferiores permiten rotar y reposicionar el contenido si
+        este no se encuentra bien ubicado. Vuelve a pulsar la pantalla cuando aparezca
+        el encuadre blanco para reubicar los objetos.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: textPages.Array.data[2]
+      value: "Los iconos (i) indican una acci\xF3n interactiva en la escena. P\xFAlsalos
+        para activar nuevos elementos o descubrir m\xE1s detalles."
       objectReference: {fileID: 0}
     - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
         type: 3}
       propertyPath: textPages.Array.data[3]
-      value: "Si una imagen en escena es demasiado grande, al pulsar en ella se mostrar\xE1
-        un di\xE1logo con la imagen completa. Puede ir acompa\xF1ado de un icono
-        (i) que muestre una leyenda."
+      value: "Al pulsar un icono de bocadillo se abrir\xE1 un di\xE1logo. En la escena
+        tambi\xE9n pueden encontrarse otros iconos para activar audio, v\xEDdeo y
+        otros efectos."
       objectReference: {fileID: 0}
     - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
         type: 3}
@@ -1123,31 +1142,31 @@ PrefabInstance:
         type: 3}
       propertyPath: imagePages.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 0c89172b8a3fcd74d9fb196964554dc9,
+      objectReference: {fileID: 21300000, guid: 08247ea9157d07f4c806f72bf5179f2b,
         type: 3}
     - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
         type: 3}
       propertyPath: imagePages.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 95382e0fe1bbba44a983480119555c2b,
+      objectReference: {fileID: 21300000, guid: 20f5462cad5035443a8b928b79a63868,
         type: 3}
     - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
         type: 3}
       propertyPath: imagePages.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: 95382e0fe1bbba44a983480119555c2b,
+      objectReference: {fileID: 21300000, guid: 2ee4b74d791113f45a4a6fe35d8ac0e2,
         type: 3}
     - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
         type: 3}
       propertyPath: imagePages.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: 08247ea9157d07f4c806f72bf5179f2b,
+      objectReference: {fileID: 21300000, guid: b96bde5a43575ff44a1c4b4f33b2544c,
         type: 3}
     - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
         type: 3}
       propertyPath: imagePages.Array.data[4]
       value: 
-      objectReference: {fileID: 21300000, guid: b96bde5a43575ff44a1c4b4f33b2544c,
+      objectReference: {fileID: 21300000, guid: 95382e0fe1bbba44a983480119555c2b,
         type: 3}
     - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
         type: 3}
@@ -4386,8 +4405,8 @@ SceneRoots:
   - {fileID: 840463266}
   - {fileID: 1940233651}
   - {fileID: 1664056264}
-  - {fileID: 394778779}
   - {fileID: 360681922}
   - {fileID: 1875621440}
   - {fileID: 10539449}
+  - {fileID: 394778779}
   - {fileID: 805017995}

@@ -2732,8 +2732,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 120969245}
-  hideObjectOnInteract: 1
-  playAppearAnimation: 1
+  showBehavior: 2
+  appearDuration: 0.3
 --- !u!4 &1082591025 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5934893023741139004, guid: 3c35d12974544d54c951658b9b7cceb2,
@@ -2930,8 +2930,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 816299380}
-  hideObjectOnInteract: 1
-  playAppearAnimation: 1
+  showBehavior: 2
+  appearDuration: 0.3
 --- !u!114 &1158224493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5239,6 +5239,6 @@ SceneRoots:
   - {fileID: 1529862079}
   - {fileID: 704214099}
   - {fileID: 486764734}
-  - {fileID: 470264590}
   - {fileID: 1507605059}
+  - {fileID: 470264590}
   - {fileID: 1539381057}

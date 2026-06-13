@@ -229,8 +229,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0.004549995, y: -0.102}
-  m_SizeDelta: {x: -0.02775, y: 0.06231}
+  m_AnchoredPosition: {x: 0, y: -0.102}
+  m_SizeDelta: {x: -0.036849998, y: 0.06231}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &82534931
 MonoBehaviour:
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_fontSizeMin: 0.02
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 32
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -338,6 +338,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1342011708847318762, guid: ab63a3517e543d04d97be71c3ca20b73,
+        type: 3}
+      propertyPath: targetObject
+      value: 
+      objectReference: {fileID: 1130573407}
     - target: {fileID: 2577496282553481161, guid: ab63a3517e543d04d97be71c3ca20b73,
         type: 3}
       propertyPath: m_Name
@@ -522,8 +527,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0.004549995, y: -0.102}
-  m_SizeDelta: {x: -0.02775, y: 0.06231}
+  m_AnchoredPosition: {x: 0, y: -0.102}
+  m_SizeDelta: {x: -0.036839996, y: 0.06231}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &163475227
 MonoBehaviour:
@@ -580,7 +585,7 @@ MonoBehaviour:
   m_fontSizeMin: 0.02
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 32
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1485,98 +1490,162 @@ MonoBehaviour:
   - key: Plaza
     postcard:
       title: Plaza Mayor
-      description: dfdfdf
-      dataTitle: PM
-      dataDescription: SD
+      description: "A comienzos del siglo XX, la Plaza pose\xEDa un jard\xEDn p\xFAblico
+        con sus \xE1rboles, parterres, fuentes. En esta \xE9poca adem\xE1s surgieron
+        mercados especializados, como el de filatelia y numism\xE1tica en los soportales,
+        y m\xE1s tarde el mercado navide\xF1o."
+      dataTitle: Postal de la Plaza Mayor en el siglo XX
+      dataDescription: Museo de Historia. (ca. 1910).  Casa Consistorial y Plaza
+        Mayor  [Tarjeta postal].  Memoriademadrid.  https:// www.memoriademadrid.es/
+        view/358760/ casa-consistorial-y-em- plaza-mayor-em
       picture: {fileID: 21300000, guid: a6d476db74b067048b85ed7e2df00d75, type: 3}
     pastPicture:
       title: Plaza Mayor en el siglo XVII
-      description: Dfefe gdgsdfujgg gfg dg dffg
-      dataTitle: 
-      dataDescription: 
+      description: "Reci\xE9n concluida en 1619, era escenario de grandes ceremonias
+        p\xFAblicas: autos de fe, juegos de ca\xF1as y celebraciones reales, como
+        la fiesta de 1623 representada por Juan de la Corte . Tras varios incendios
+        (1631, 1672, 1790), fue reconstruida por arquitectos como G\xF3mez de Mora
+        y Villanueva, adquiriendo la forma cerrada y homog\xE9nea actual."
+      dataTitle: Referencias y fuentes
+      dataDescription: "Museo de Historia - Juan de la Corte.  (ca. 1623). Fiesta
+        en la Plaza Mayor  [\xD3leo sobre lienzo].  Memoriademadrid.  https:// www.memoriademadrid.es/
+        view/438537/ fiesta-en-la-em-plaza-mayor-em"
       picture: {fileID: 21300000, guid: 6bc39a182dd256641bf60c2451dd74ae, type: 3}
     presentPicture:
       title: Plaza Mayor en la actualidad
-      description: Dfefe gdgsdfujgg gfg dg dffg
-      dataTitle: 
-      dataDescription: 
+      description: "En la Real Casa de la Panader\xEDa se lleva a cabo en 1992 una
+        restauraci\xF3n de su fachada, tras ella el pintor Carlos Franco realiza
+        un programa iconogr\xE1fico que re\xFAne diversos elementos relacionados
+        con la historia, uso y motivos para la creaci\xF3n de la Plaza. Todos los
+        motivos se encontraban inspirados en la mitolog\xEDa griega."
+      dataTitle: "Fotograf\xEDa Plaza Mayor"
+      dataDescription: "Fotograf\xEDa recuperada de Wikimedia Commons"
       picture: {fileID: 21300000, guid: c1afa73c0e036844496ff913036883fd, type: 3}
   - key: Sol
     postcard:
       title: Puerta del Sol
-      description: dfdfd
-      dataTitle: a
-      dataDescription: b
+      description: "En 1871, Sol fue el punto de partida de la primera l\xEDnea de
+        tranv\xEDa de Madrid. En los a\xF1os treinta del siglo XX, el tr\xE1fico
+        era tan denso que los atascos llegaban hasta la lejana Cibeles. As\xED, la
+        plaza funcionaba ya como una estaci\xF3n a cielo abierto, donde el bullicio
+        el\xE9ctrico sustituy\xF3 para siempre al trote de los caballos."
+      dataTitle: Postal de la Puerta del Sol en el siglo XX
+      dataDescription: Museo de Historia. (ca. 1900).  Puerta del Sol [Tarjeta postal]. 
+        Memoriademadrid.  https:// www.memoriademadrid.es/ view/364042/ em-puerta-em-del-em-sol-em
       picture: {fileID: 21300000, guid: 81378a35021d51c4eb1320ad922552b6, type: 3}
     pastPicture:
-      title: dddddd dddd
-      description: bbbbbbbbb
-      dataTitle: c
-      dataDescription: d
+      title: "Los or\xEDgenes de la Puerta del Sol"
+      description: "En los siglos XVII y XVIII, Sol no era a\xFAn una plaza, sino
+        un acceso oriental de la villa, con la iglesia del Buen Suceso, el convento
+        de San Felipe y la famosa Mariblanca presidiendo la fuente. Era un lugar
+        de tr\xE1nsito, mentideros y vida popular, germen del centro urbano que nacer\xEDa
+        m\xE1s tarde."
+      dataTitle: Referencias y fuentes
+      dataDescription: "Museo de Historia - Louis Meunier.  (1665\u20131668). La
+        Puerta del Sol. Madrid [Grabado en cobre, talla dulce].  Memoriademadrid. 
+        https:// www.memoriademadrid.es/ view/394685/"
       picture: {fileID: 21300000, guid: e865dcb1caa2b9c42a1f0315e799142d, type: 3}
     presentPicture:
-      title: ssss sssss s
-      description: fdfdfdfd
-      dataTitle: e
-      dataDescription: f
+      title: La Puerta del Sol en la actualidad
+      description: La Puerta del Sol es hoy un gran espacio peatonal, punto de encuentro
+        y escenario de protestas y celebraciones como las campanadas.
+      dataTitle: "Fotograf\xEDa Puerta del Sol"
+      dataDescription: "Fotograf\xEDa recuperada de Wikimedia Commons"
       picture: {fileID: 21300000, guid: 066a47d9adf515149a732f9e76410ef2, type: 3}
   - key: Atocha
     postcard:
-      title: 
-      description: 
-      dataTitle: 
-      dataDescription: 
-      picture: {fileID: 0}
+      title: "Estaci\xF3n Puerta de Atocha"
+      description: "La estaci\xF3n inaugurada en 1851 hered\xF3 su funci\xF3n de
+        entrada a Madrid, y en 1992 la terminal de alta velocidad adopt\xF3 oficialmente
+        el nombre \u201CMadrid\u2013Puerta de Atocha\u201D. La postal muestra la
+        antigua Estaci\xF3n del Mediod\xEDa, donde hoy se encuentra el jard\xEDn
+        tropical en el interior de la marquesina hist\xF3rica."
+      dataTitle: "Postal de la Estaci\xF3n Puerta de Atocha s. XX"
+      dataDescription: "Museo de Historia - J. Roig.  (1916\u20131927).  Estaci\xF3n
+        del Mediod\xEDa [Tarjeta postal].  Memoriademadrid.  https:// www.memoriademadrid.es/
+        view/351548/ estacion-em-del-em-mediodia"
+      picture: {fileID: 21300000, guid: 48f4f060094346342aa0e557b189202e, type: 3}
     pastPicture:
-      title: 
-      description: 
-      dataTitle: 
-      dataDescription: 
-      picture: {fileID: 0}
+      title: "Los or\xEDgenes de la Puerta de Atocha"
+      description: "La primera Puerta de Atocha era un acceso modesto de la cerca
+        medieval, situada cerca del arrabal de Santa Cruz y del camino de Vallecas.
+        A la entrada ya en Madrid pod\xEDa observarse la antigua fuente de la Alcachofa,
+        actualmente ubicada en el Retiro."
+      dataTitle: Referencias y fuentes
+      dataDescription: "Museo de Historia - Museo Municipal - Vicente Camar\xF3n. 
+        (ca. 1836). Vista de la Puerta de Atocha [Litograf\xEDa]. Memoriademadrid.
+        https:// www.memoriademadrid.es/ view/439657/ vista-em-de-em-la-em- puerta-de-atocha-em"
+      picture: {fileID: 21300000, guid: 07c089167debc1748b0ee027f2407da5, type: 3}
     presentPicture:
-      title: 
-      description: 
-      dataTitle: 
-      dataDescription: 
-      picture: {fileID: 0}
+      title: "Atocha hoy en d\xEDa"
+      description: "Actualmente se trata de la estaci\xF3n con m\xE1s tr\xE1fico
+        de pasajeros del pa\xEDs, as\xED como una de las principales de Europa."
+      dataTitle: "Fotograf\xEDa Atocha"
+      dataDescription: "Fotograf\xEDa recuperada de Wikimedia Commons"
+      picture: {fileID: 21300000, guid: 297ce151bc1c5a84ca4afbd2a721e671, type: 3}
   - key: Palacio
     postcard:
-      title: 
-      description: 
-      dataTitle: 
-      dataDescription: 
-      picture: {fileID: 0}
+      title: Palacio Real
+      description: "Durante las primeras d\xE9cadas del siglo XX, el Manzanares a\xFAn
+        era un espacio semi\u2011rural y las riberas se utilizaban para lavar y tender
+        ropa, como muestra la postal. El Palacio Real, construido tras el incendio
+        del Real Alc\xE1zar en 1734, ya era entonces un s\xEDmbolo monumental de
+        Madrid, pero su entorno no estaba urbanizado como hoy: la cornisa occidental
+        manten\xEDa un aspecto m\xE1s natural y menos construido."
+      dataTitle: Postal del Palacio Realen el siglo XX
+      dataDescription: Museo de Historia. (ca. 1917).  Puente de Segovia y Palacio
+        Real  [Tarjeta postal]. Memoriademadrid.  https:// www.memoriademadrid.es/
+        view/352412/ puente-de-segovia-y- em-palacio-real-em
+      picture: {fileID: 21300000, guid: 2c38bd1012dceb94a9ea329d9a87e90f, type: 3}
     pastPicture:
-      title: 
-      description: 
-      dataTitle: 
-      dataDescription: 
-      picture: {fileID: 0}
+      title: "El antiguo Alc\xE1zar de Madrid"
+      description: "En la \xE9poca en que los musulmanes dominaban la pen\xEDnsula,
+        el emir Muhamad I construy\xF3, en el siglo IX, una peque\xF1a fortificaci\xF3n
+        que era el n\xFAcleo central de la ciudadela isl\xE1mica de Mayrit. Tras
+        la conquista cristiana, el castillo se ampli\xF3 y se convirti\xF3 en residencia
+        ocasional de los reyes castellanos, evolucionando hacia un complejo palaciego."
+      dataTitle: Referencias y fuentes
+      dataDescription: "Museo de Historia -  Museo Municipal de Madrid -  Felix Castello. 
+        (s. XVII).  Vista del Alc\xE1zar de Madrid  [Pintura al \xF3leo sobre lienzo]. 
+        Memoriademadrid.  https:// www.memoriademadrid.es/ view/421403/ vista-del-alcazar-de-madrid"
+      picture: {fileID: 21300000, guid: e456040c791b2d842812f75a6f197f81, type: 3}
     presentPicture:
-      title: 
-      description: 
-      dataTitle: 
-      dataDescription: 
+      title: El Palacio Real en la actualidad
+      description: "Residencia oficial de la monarqu\xEDa espa\xF1ola, aunque la
+        familia real no habita en \xE9l, sino en el Palacio de la Zarzuela, por lo
+        que sirve como espacio para ceremonias del Estado y actos solemnes."
+      dataTitle: "Fotograf\xEDa Palacio Real"
+      dataDescription: "Fotograf\xEDa recuperada de Wikimedia Commons"
       picture: {fileID: 21300000, guid: 7c7e6c8a53cf64b4aa55a92fe3043ea0, type: 3}
   - key: Alcala
     postcard:
-      title: 
-      description: 
-      dataTitle: 
-      dataDescription: 
+      title: "Puerta de Alcal\xE1"
+      description: A comienzos del siglo XX, la puerta ya era un icono consolidado,
+        fotografiado y reproducido en postales como la ya obtenida.
+      dataTitle: "Postal de la Puerta de Alcal\xE1 en el siglo XX"
+      dataDescription: "Museo de Historia. (1900).  Puerta de Alcal\xE1 [Tarjeta
+        postal].  Memoriademadrid.  https:// www.memoriademadrid.es/ view/352314/
+        em-puerta-em-de-alcala"
       picture: {fileID: 21300000, guid: ec47296f27a83134f9ebef250f474eba, type: 3}
     pastPicture:
-      title: 
-      description: 
-      dataTitle: 
-      dataDescription: 
-      picture: {fileID: 0}
+      title: "La Puerta de Alcal\xE1 en los siglos XVII y XVIII"
+      description: "En los siglos XVII y XVIII, la puerta no era a\xFAn el arco neocl\xE1sico
+        actual, sino una sucesi\xF3n de estructuras previas: primero un arco tripartito
+        para la entrada de Margarita de Austria, luego el arco de un solo vano como
+        la que muestra la imagen y finalmente la versi\xF3n tripartita."
+      dataTitle: Referencias y fuentes
+      dataDescription: "Biblioteca Nacional de Espa\xF1a.  (1636).  Forma de la Puerta
+        de Alcal\xE1 de Madrid  [Ilustraci\xF3n].  Europeana.  https:// www.europeana.eu/
+        es/item/2022717/ bnesearch_detalle_bdh0000061567"
+      picture: {fileID: 21300000, guid: 8f698cd5799aa4e4cbc0f78e0fff120b, type: 3}
     presentPicture:
-      title: 
-      description: 
-      dataTitle: 
-      dataDescription: 
-      picture: {fileID: 21300000, guid: 297ce151bc1c5a84ca4afbd2a721e671, type: 3}
+      title: "Puerta de Alcal\xE1 en la actualidad"
+      description: "Desde 1976, la Puerta qued\xF3 declarada como monumento hist\xF3rico-art\xEDstico
+        de car\xE1cter nacional. Por tanto, es bien de inter\xE9s cultural con categor\xEDa
+        de monumento."
+      dataTitle: "Fotograf\xEDa Puerta de Alcal\xE1"
+      dataDescription: "Fotograf\xEDa recuperada de Wikimedia Commons"
+      picture: {fileID: 21300000, guid: bd72c5a5db258134a818b47fa651ccf9, type: 3}
   objectToMove: {fileID: 512115430}
   uiDisplay: {fileID: 668652992}
   postcardWarningCanvas: {fileID: 2505022986869765206}
@@ -2217,7 +2286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9098039}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2291,7 +2360,7 @@ MonoBehaviour:
   m_Script: {fileID: 422107450, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlaneIndicator: {fileID: 3677085263770089449, guid: 2ecae98587c5f496faa5d87c854894bf,
+  PlaneIndicator: {fileID: 564555645214273356, guid: 93b74896230542f41839c86bbe781474,
     type: 3}
   Height: 1.4
   OnInteractiveHitTest:
@@ -2365,6 +2434,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 74122336582608829, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -248
+      objectReference: {fileID: 0}
+    - target: {fileID: 751415449142213167, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_margin.w
+      value: 0.87298584
+      objectReference: {fileID: 0}
     - target: {fileID: 823331370628655882, guid: c8a9d4b1253a13643af666cd1f255f05,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2475,6 +2554,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7693541932512263168, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -680
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693541932512263168, guid: c8a9d4b1253a13643af666cd1f255f05,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -140.00002
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2561,8 +2650,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 451578456}
-  hideObjectOnInteract: 1
-  playAppearAnimation: 1
+  showBehavior: 2
+  appearDuration: 0.3
 --- !u!65 &1094489580
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2782,10 +2871,226 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasToShow: {fileID: 1079910449}
-  titleField: {fileID: 1079910445}
-  descriptionField: {fileID: 0}
-  infoTitle: "Informaci\xF3n"
-  infoDescription: "Este es un punto de inter\xE9s."
+  titleField: {fileID: 1079910446}
+  descriptionField: {fileID: 1079910445}
+  infoTitle: Villa de Madrid - Antonio Mancelli (c.a. 1623)
+  infoDescription: "Plano de Madrid en perspectiva caballera. En el \xE1ngulo superior
+    izquierdo se representa el escudo de Madrid. En la zona inferior tiene una leyenda
+    con nombres de calles y edificios. En el \xE1ngulo inferior derecho cuenta con
+    una cartela que en este ejemplar est\xE1 vac\xEDa."
+--- !u!1001 &1130573406
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 608218804071065772, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_Name
+      value: CanvasHelp Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 608218804071065772, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866487749395515034, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: textPages.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: imagePages.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: textPages.Array.data[0]
+      value: Toca la pantalla cuando aparezca el recuadro blanco una vez se reconozca
+        una superficie para activar el contenido.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: textPages.Array.data[1]
+      value: Los iconos inferiores permiten rotar y reposicionar el contenido si
+        este no se encuentra bien ubicado. Vuelve a pulsar la pantalla cuando aparezca
+        el encuadre blanco para reubicar los objetos.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: textPages.Array.data[2]
+      value: "Los iconos (i) indican una acci\xF3n interactiva en la escena. P\xFAlsalos
+        para activar nuevos elementos o descubrir m\xE1s detalles."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: textPages.Array.data[3]
+      value: "Al pulsar un icono de bocadillo se abrir\xE1 un di\xE1logo. En la escena
+        tambi\xE9n pueden encontrarse otros iconos para activar audio, v\xEDdeo y
+        otros efectos."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: textPages.Array.data[4]
+      value: "Para ocultar todos los iconos del mapa pulsa en el bot\xF3n de transparencias
+        en la leyenda del mapa. Vuelve a pulsar el bot\xF3n para que los iconos reaparezcan."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: textPages.Array.data[5]
+      value: "Pulsa sobre aquellas postales que hayas obtenido para mostrar la evoluci\xF3n
+        del punto de inter\xE9s."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: imagePages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: dc362789a54faf8458fda0a892e04a7a,
+        type: 3}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: imagePages.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 20f5462cad5035443a8b928b79a63868,
+        type: 3}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: imagePages.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2ee4b74d791113f45a4a6fe35d8ac0e2,
+        type: 3}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: imagePages.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: b96bde5a43575ff44a1c4b4f33b2544c,
+        type: 3}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: imagePages.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 361002a9251e1df4cab6b3d73c71bb1e,
+        type: 3}
+    - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+        type: 3}
+      propertyPath: imagePages.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 602383fa72f76ac40af70f3e91c2258b,
+        type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2, type: 3}
+--- !u!1 &1130573407 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 608218804071065772, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1130573406}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1192896149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2943,8 +3248,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0.004549995, y: -0.166}
-  m_SizeDelta: {x: -0.02775, y: 0.06231}
+  m_AnchoredPosition: {x: 0, y: -0.166}
+  m_SizeDelta: {x: -0.036849998, y: 0.06231}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1206145338
 MonoBehaviour:
@@ -2966,7 +3271,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Puerta de Atocha en el Siglo XVI
+  m_text: "En los siglos XVII y XVIII, Sol no era a\xFAn una plaza, sino un acceso
+    oriental de la villa, con la iglesia del Buen Suceso, el convento de San Felipe
+    y la famosa Mariblanca presidiendo la fuente. Era un lugar de tr\xE1nsito, mentideros
+    y vida popular, germen del centro urbano que nacer\xEDa m\xE1s tarde."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d5a7a4ebf308f204fb6ce248de6e0e2c, type: 2}
   m_sharedMaterial: {fileID: -8375241867258226288, guid: d5a7a4ebf308f204fb6ce248de6e0e2c,
@@ -3001,8 +3309,8 @@ MonoBehaviour:
   m_fontSizeMin: 0.01
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4509,8 +4817,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0.004549995, y: -0.166}
-  m_SizeDelta: {x: -0.02775, y: 0.06231}
+  m_AnchoredPosition: {x: 0, y: -0.166}
+  m_SizeDelta: {x: -0.036849998, y: 0.06231}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1950833281
 MonoBehaviour:
@@ -4567,8 +4875,8 @@ MonoBehaviour:
   m_fontSizeMin: 0.01
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4908,4 +5216,5 @@ SceneRoots:
   - {fileID: 1079910443}
   - {fileID: 1192896149}
   - {fileID: 2505022986869765205}
+  - {fileID: 1130573406}
   - {fileID: 93221910}
