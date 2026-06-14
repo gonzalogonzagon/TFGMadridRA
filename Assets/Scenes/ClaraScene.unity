@@ -4493,9 +4493,9 @@ PrefabInstance:
     - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
         type: 3}
       propertyPath: textPages.Array.data[1]
-      value: Los iconos inferiores permiten rotar y reposicionar el contenido si
-        este no se encuentra bien ubicado. Vuelve a pulsar la pantalla cuando aparezca
-        el encuadre blanco para reubicar los objetos.
+      value: Los botones inferiores de la interfaz permiten rotar y reposicionar
+        el contenido si este no se encuentra bien ubicado. Vuelve a tocar la pantalla
+        cuando aparezca el encuadre blanco para reubicar los objetos.
       objectReference: {fileID: 0}
     - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
         type: 3}

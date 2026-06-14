@@ -1107,9 +1107,9 @@ PrefabInstance:
     - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
         type: 3}
       propertyPath: textPages.Array.data[1]
-      value: Los iconos inferiores permiten rotar y reposicionar el contenido si
-        este no se encuentra bien ubicado. Vuelve a pulsar la pantalla cuando aparezca
-        el encuadre blanco para reubicar los objetos.
+      value: Los botones inferiores de la interfaz permiten rotar y reposicionar
+        el contenido si este no se encuentra bien ubicado. Vuelve a tocar la pantalla
+        cuando aparezca el encuadre blanco para reubicar los objetos.
       objectReference: {fileID: 0}
     - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
         type: 3}
@@ -2202,6 +2202,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5913704164000237278, guid: ab63a3517e543d04d97be71c3ca20b73,
         type: 3}
+      propertyPath: m_Delegates.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913704164000237278, guid: ab63a3517e543d04d97be71c3ca20b73,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].eventID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913704164000237278, guid: ab63a3517e543d04d97be71c3ca20b73,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].eventID
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913704164000237278, guid: ab63a3517e543d04d97be71c3ca20b73,
+        type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1887790198}
@@ -2218,12 +2233,12 @@ PrefabInstance:
     - target: {fileID: 5913704164000237278, guid: ab63a3517e543d04d97be71c3ca20b73,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RotateStep
+      value: StartContinuousRotation
       objectReference: {fileID: 0}
     - target: {fileID: 5913704164000237278, guid: ab63a3517e543d04d97be71c3ca20b73,
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartContinuousRotation
+      value: StopContinuousRotation
       objectReference: {fileID: 0}
     - target: {fileID: 5913704164000237278, guid: ab63a3517e543d04d97be71c3ca20b73,
         type: 3}

@@ -6,17 +6,12 @@ public class ContentRotationController : MonoBehaviour
     [SerializeField] private float rotationSpeed = 60f; // Degrees per second for continuous rotation
     private bool isRotating = false;
 
-    // Called by the button on press
-    public void RotateStep()
-    {
-        if (contentRoot != null && contentRoot.activeInHierarchy)
-            contentRoot.transform.Rotate(0, 5f, 0, Space.World);
-    }
+    private bool CanRotate() => contentRoot != null && contentRoot.activeInHierarchy;
 
     // Called by the button on hold (OnPointerDown)
     public void StartContinuousRotation()
     {
-        if (contentRoot != null && contentRoot.activeInHierarchy)
+        if (CanRotate())
             isRotating = true;
     }
 
@@ -28,7 +23,7 @@ public class ContentRotationController : MonoBehaviour
 
     void Update()
     {
-        if (isRotating && contentRoot != null && contentRoot.activeInHierarchy)
+        if (isRotating && CanRotate())
         {
             contentRoot.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0, Space.World);
         }

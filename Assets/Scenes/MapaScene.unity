@@ -366,12 +366,12 @@ PrefabInstance:
     - target: {fileID: 5913704164000237278, guid: ab63a3517e543d04d97be71c3ca20b73,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RotateStep
+      value: StartContinuousRotation
       objectReference: {fileID: 0}
     - target: {fileID: 5913704164000237278, guid: ab63a3517e543d04d97be71c3ca20b73,
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartContinuousRotation
+      value: StopContinuousRotation
       objectReference: {fileID: 0}
     - target: {fileID: 5913704164000237278, guid: ab63a3517e543d04d97be71c3ca20b73,
         type: 3}
@@ -1491,7 +1491,7 @@ MonoBehaviour:
     postcard:
       title: Plaza Mayor
       description: "A comienzos del siglo XX, la Plaza pose\xEDa un jard\xEDn p\xFAblico
-        con sus \xE1rboles, parterres, fuentes. En esta \xE9poca adem\xE1s surgieron
+        con sus \xE1rboles, parterres, fuentes. En esta \xE9poca adem\xE1s, surgieron
         mercados especializados, como el de filatelia y numism\xE1tica en los soportales,
         y m\xE1s tarde el mercado navide\xF1o."
       dataTitle: Postal de la Plaza Mayor en el siglo XX
@@ -1559,7 +1559,7 @@ MonoBehaviour:
         entrada a Madrid, y en 1992 la terminal de alta velocidad adopt\xF3 oficialmente
         el nombre \u201CMadrid\u2013Puerta de Atocha\u201D. La postal muestra la
         antigua Estaci\xF3n del Mediod\xEDa, donde hoy se encuentra el jard\xEDn
-        tropical en el interior de la marquesina hist\xF3rica."
+        tropical, en el interior de la marquesina hist\xF3rica."
       dataTitle: "Postal de la Estaci\xF3n Puerta de Atocha s. XX"
       dataDescription: "Museo de Historia - J. Roig.  (1916\u20131927).  Estaci\xF3n
         del Mediod\xEDa [Tarjeta postal].  Memoriademadrid.  https:// www.memoriademadrid.es/
@@ -1592,7 +1592,7 @@ MonoBehaviour:
         del Real Alc\xE1zar en 1734, ya era entonces un s\xEDmbolo monumental de
         Madrid, pero su entorno no estaba urbanizado como hoy: la cornisa occidental
         manten\xEDa un aspecto m\xE1s natural y menos construido."
-      dataTitle: Postal del Palacio Realen el siglo XX
+      dataTitle: Postal del Palacio Real en el siglo XX
       dataDescription: Museo de Historia. (ca. 1917).  Puente de Segovia y Palacio
         Real  [Tarjeta postal]. Memoriademadrid.  https:// www.memoriademadrid.es/
         view/352412/ puente-de-segovia-y- em-palacio-real-em
@@ -1620,8 +1620,10 @@ MonoBehaviour:
   - key: Alcala
     postcard:
       title: "Puerta de Alcal\xE1"
-      description: A comienzos del siglo XX, la puerta ya era un icono consolidado,
-        fotografiado y reproducido en postales como la ya obtenida.
+      description: "A comienzos del siglo XX, la puerta ya era un icono consolidado,
+        fotografiado y reproducido en postales como la de la imagen. El aspecto que
+        la Puerta tiene hoy corresponde a los dise\xF1os de Francisco Sabatini, elegido
+        ganador del concurso convocado por el rey Carlos III."
       dataTitle: "Postal de la Puerta de Alcal\xE1 en el siglo XX"
       dataDescription: "Museo de Historia. (1900).  Puerta de Alcal\xE1 [Tarjeta
         postal].  Memoriademadrid.  https:// www.memoriademadrid.es/ view/352314/
@@ -1634,9 +1636,9 @@ MonoBehaviour:
         para la entrada de Margarita de Austria, luego el arco de un solo vano como
         la que muestra la imagen y finalmente la versi\xF3n tripartita."
       dataTitle: Referencias y fuentes
-      dataDescription: "Biblioteca Nacional de Espa\xF1a.  (1636).  Forma de la Puerta
-        de Alcal\xE1 de Madrid  [Ilustraci\xF3n].  Europeana.  https:// www.europeana.eu/
-        es/item/2022717/ bnesearch_detalle_bdh0000061567"
+      dataDescription: "Biblioteca Nacional de Espa\xF1a. (1636). Forma de la Puerta
+        de Alcal\xE1 de Madrid [Ilustraci\xF3n]. Europeana. https:// www.europeana.eu/
+        es/item/2022717/ bnesearch_detalle_ bdh0000061567"
       picture: {fileID: 21300000, guid: 8f698cd5799aa4e4cbc0f78e0fff120b, type: 3}
     presentPicture:
       title: "Puerta de Alcal\xE1 en la actualidad"
@@ -3009,15 +3011,15 @@ PrefabInstance:
     - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
         type: 3}
       propertyPath: textPages.Array.data[0]
-      value: Toca la pantalla cuando aparezca el recuadro blanco una vez se reconozca
+      value: Toca la pantalla cuando aparezca el encuadre blanco una vez se reconozca
         una superficie para activar el contenido.
       objectReference: {fileID: 0}
     - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
         type: 3}
       propertyPath: textPages.Array.data[1]
-      value: Los iconos inferiores permiten rotar y reposicionar el contenido si
-        este no se encuentra bien ubicado. Vuelve a pulsar la pantalla cuando aparezca
-        el encuadre blanco para reubicar los objetos.
+      value: Los botones inferiores de la interfaz permiten rotar y reposicionar
+        el contenido si este no se encuentra bien ubicado. Vuelve a tocar la pantalla
+        cuando aparezca el encuadre blanco para reubicar los objetos.
       objectReference: {fileID: 0}
     - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
         type: 3}
@@ -3041,8 +3043,8 @@ PrefabInstance:
     - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
         type: 3}
       propertyPath: textPages.Array.data[5]
-      value: "Pulsa sobre aquellas postales que hayas obtenido para mostrar la evoluci\xF3n
-        del punto de inter\xE9s."
+      value: "Pulsa sobre aquellas postales que hayas obtenido para abrir una interfaz
+        y mostrar la evoluci\xF3n del punto de inter\xE9s."
       objectReference: {fileID: 0}
     - target: {fileID: 6306225433585411197, guid: 3ea7c0a60ef5b414383ceb7e40d9fda2,
         type: 3}
