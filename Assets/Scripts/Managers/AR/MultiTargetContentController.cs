@@ -4,11 +4,11 @@ using Vuforia;
 public class MultiTargetContentController : MonoBehaviour
 {
     [SerializeField]
-    public GameObject content;
+    private GameObject content;
 
     [SerializeField]
     [Tooltip("List of ImageTargetBehaviour representing the targets to detect")]
-    public ImageTargetBehaviour[] targets;
+    private ImageTargetBehaviour[] targets;
 
     private ImageTargetBehaviour currentTarget;
 
